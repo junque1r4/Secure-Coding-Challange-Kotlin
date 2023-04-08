@@ -3,7 +3,7 @@
 ## Overview
 
 * The Project is under construction, you can help making tests or new challenges! *
-* ███▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 🚧 Maturity Level 
+* ███████████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 🚧 Maturity Level 
 
 Welcome to the Secure Kotlin Coding Challenge! This challenge is designed to test and improve your cybersecurity knowledge and skills, particularly when it comes to writing secure code in Kotlin. In this challenge, you'll be tasked with securing a vulnerable application using the Kotlin programming language.
 
