@@ -11,6 +11,8 @@ class PersonService (private val personRepository: PersonRepository) {
 
     fun findById(id: Long): Person? = personRepository.findById(id).orElse(null)
 
+    fun findByEmail(email: String): Person? = personRepository.findByEmail(email)
+
     fun save(person: Person): Person = personRepository.save(person)
 
     fun deleteById(id: Long) = personRepository.deleteById(id)

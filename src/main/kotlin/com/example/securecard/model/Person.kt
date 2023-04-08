@@ -3,7 +3,7 @@ package com.example.securecard.model
 import jakarta.persistence.*
 
 @Entity
-@Table(name = "Person")
+@Table(name = "person")
 data class Person(
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -13,9 +13,6 @@ data class Person(
     @Column(name = "name")
     var name: String = "",
 
-    @Column(name = "cpf")
-    var cpf: String = "",
-
     @Column(name = "email")
     var email: String = "",
 
@@ -24,4 +21,8 @@ data class Person(
 
     @Column(name = "admin")
     var admin: Boolean = false
-) { }
+) {
+    fun comparePassword(password: String): Boolean {
+        return this.password == password
+    }
+}
