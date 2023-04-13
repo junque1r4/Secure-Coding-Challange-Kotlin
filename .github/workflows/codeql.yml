@@ -31,14 +31,9 @@ jobs:
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v1
 
-    # Autobuild attempts to build any compiled languages  (C/C++, C#, Go, or Java).
-    # If this step fails, then you should remove it and run the build manually (see below)
-    - name: Autobuild
-      uses: github/codeql-action/autobuild@v1
-      with:
-        # Use Gradle to build the project
-        build-command: "./gradlew assemble --no-daemon"
-
+    # Builds the project using Gradle.
+    - name: Build
+      run: ./gradlew bootJar
 
     # Analyzes your code with the specified queries.
     - name: Analyze
@@ -48,6 +43,13 @@ jobs:
         # Path to the CodeQL database to scan.
         # Use the env.CODAQL_DATABASE environment variable to set the path to the database.
         database: ${{ env.CODEQL_DATABASE }}
+        # Path to the compiled code to be analyzed.
+        # Use the env.CODEQL_JAVA_CLASSPATH environment variable to set the classpath.
+        # In this example, the app.jar file is located in the build/libs directory.
+        # Change the path and filename to match the location of your app.jar file.
+        languages: "java"
+        main-language: "java"
+        additional-classpath: "/github/workspace/build/libs/app.jar"
 
     # Uploads the results of the analysis as a GitHub Check.
     - name: Upload SARIF results
