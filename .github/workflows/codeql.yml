@@ -5,7 +5,10 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
-
+    
+env:
+  SARIF_FILE: results.sarif
+  
 jobs:
   analyze:
     name: Analyze
