@@ -44,7 +44,7 @@ jobs:
 
     # Analyzes your code with the specified queries.
     - name: Analyze
-      uses: github/codeql-action/analyze@v1
+      uses: github/codeql-action/analyze@v2
       with:
         queries: "security-and-quality"
         # Path to the CodeQL database to scan.
