@@ -60,6 +60,4 @@ jobs:
         languages: "java"
         main-language: "java"
         additional-classpath: "/github/workspace/build/libs/app.jar"
-      with:
-        # Path to the SARIF file containing the results of the analysis.
-        sarif_file: ${{ env.SARIF_FILE }}
+
