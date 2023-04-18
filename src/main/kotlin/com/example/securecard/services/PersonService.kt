@@ -15,5 +15,5 @@ class PersonService (private val personRepository: PersonRepository) {
 
     fun save(person: Person): Person = personRepository.save(person)
 
-    fun deleteById(id: Long) = personRepository.deleteById(id)
+    fun deleteById(id: Person) = id.id?.let { personRepository.deleteById(it) }
 }

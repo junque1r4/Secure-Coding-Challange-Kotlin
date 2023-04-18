@@ -1,0 +1,405 @@
+[T 21:18:24 7853] CodeQL CLI version 2.12.6
+[T 21:18:24 7853] Initializing tracer.
+[T 21:18:24 7853] Initialising tags...
+[T 21:18:24 7853] ID set to 0000000000001EAD_0000000000000001 (parent root)
+[T 21:18:25 7853] Initializing tracer.
+[T 21:18:25 7853] Initialising tags...
+[T 21:18:25 7853] ID set to 0000000000001EAD_0000000000000002 (parent root)
+[T 21:18:25 7853] Warning: SEMMLE_EXEC and SEMMLE_EXECP not set. Falling back to path lookup on argv[0].
+[T 21:18:25 7853] ==== Candidate to intercept: /Users/joaojunqueira/codeql/tools/osx64/runner-osx (canonical: /Users/joaojunqueira/codeql/tools/osx64/runner-osx) ====
+[T 21:18:25 7853] Lua: === Intercepted call to /users/joaojunqueira/codeql/tools/osx64/runner-osx ===
+[T 21:18:25 7853] Executing the following tracer actions:
+[T 21:18:25 7853] Tracer actions:
+[T 21:18:25 7853] pre_invocations(0)
+[T 21:18:25 7853] post_invocations(0)
+[T 21:18:25 7853] trace_languages(1): [java]
+[T 21:18:25 7855] Attempting to switch stdout/stderr to 3...
+/Users/joaojunqueira/IdeaProjects/SecureCard/SecureCardDB/working/copy-root/000001F6/bin/bash.semmle.00001EAD.120338A8.slice.x86_64: replacing existing signature
+[T 21:18:44 7853] Initializing tracer.
+[T 21:18:44 7853] Initialising tags...
+[T 21:18:44 7853] ID set to 0000000000001EAD_0000000000000003 (parent 0000000000001EAD_0000000000000002)
+[T 21:18:44 7853] ==== Candidate to intercept: /Users/joaojunqueira/codeql/java/tools/autobuild.sh (canonical: /Users/joaojunqueira/codeql/java/tools/autobuild.sh) ====
+[T 21:18:44 7853] Lua: === Intercepted call to /users/joaojunqueira/codeql/java/tools/autobuild.sh ===
+[T 21:18:44 7853] Executing the following tracer actions:
+[T 21:18:44 7853] Tracer actions:
+[T 21:18:44 7853] pre_invocations(0)
+[T 21:18:44 7853] post_invocations(0)
+[T 21:18:44 7853] trace_languages(1): [java]
+[T 21:18:44 7867] Attempting to switch stdout/stderr to 3...
+/Applications/Xcode-14.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/joaojunqueira/IdeaProjects/SecureCard/SecureCardDB/working/copy-root/000001F6/Users/joaojunqueira/codeql/tools/osx64/java/bin/java.semmle.00001EBA.35AC20A8.slice.x86_64
+/Applications/Xcode-14.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/joaojunqueira/IdeaProjects/SecureCard/SecureCardDB/working/copy-root/000001F6/Users/joaojunqueira/codeql/tools/osx64/java/bin/java.semmle.00001EBA.35AC20A8.slice.x86_64
+/Users/joaojunqueira/IdeaProjects/SecureCard/SecureCardDB/working/copy-root/000001F6/Users/joaojunqueira/codeql/tools/osx64/java/bin/java.semmle.00001EBA.35AC20A8.slice.x86_64: replacing existing signature
+[T 21:18:46 7866] Initializing tracer.
+[T 21:18:46 7866] Initialising tags...
+[T 21:18:46 7866] ID set to 0000000000001EBA_0000000000000001 (parent 0000000000001EAD_0000000000000003)
+[T 21:18:46 7866] ==== Candidate to intercept: /Users/joaojunqueira/codeql/tools/osx64/java/bin/java (canonical: /Users/joaojunqueira/codeql/tools/osx64/java/bin/java) ====
+[T 21:18:46 7866] Lua: === Intercepted call to /users/joaojunqueira/codeql/tools/osx64/java/bin/java ===
+[T 21:18:46 7866] Executing the following tracer actions:
+[T 21:18:46 7866] Tracer actions:
+[T 21:18:46 7866] pre_invocations(0)
+[T 21:18:46 7866] post_invocations(0)
+[T 21:18:46 7866] trace_languages(1): [java]
+[T 21:18:46 7866] Passing through -javaagent:/Users/joaojunqueira/codeql/java/tools/codeql-java-agent.jar=ignore-project,java,kotlin to underlying JVM.
+[T 21:18:46 7866] Passing through -Xbootclasspath/a:/Users/joaojunqueira/codeql/java/tools/codeql-java-agent.jar to underlying JVM.
+[T 21:18:46 7866] Intercepted JVM creation with extra hidden args: ['-javaagent:/Users/joaojunqueira/codeql/java/tools/codeql-java-agent.jar=ignore-project,java,kotlin' '-Xbootclasspath/a:/Users/joaojunqueira/codeql/java/tools/codeql-java-agent.jar' ] (result: 1, 0).
+[T 21:18:47 7881] Attempting to switch stdout/stderr to 21...
+/Users/joaojunqueira/IdeaProjects/SecureCard/SecureCardDB/working/copy-root/000001F6/Users/joaojunqueira/codeql/tools/osx64/java/lib/jspawnhelper.semmle.00001EBA.13C32C70.slice.x86_64: replacing existing signature
+[T 21:18:47 7887] Initializing tracer.
+[T 21:18:47 7887] Initialising tags...
+[T 21:18:47 7887] ID set to 0000000000001ECF_0000000000000001 (parent 0000000000001EBA_0000000000000001)
+[T 21:18:47 7887] ==== Candidate to intercept: /Users/joaojunqueira/codeql/tools/osx64/java/lib/jspawnhelper (canonical: /Users/joaojunqueira/codeql/tools/osx64/java/lib/jspawnhelper) ====
+[T 21:18:47 7887] Lua: === Intercepted call to /users/joaojunqueira/codeql/tools/osx64/java/lib/jspawnhelper ===
+[T 21:18:47 7887] Executing the following tracer actions:
+[T 21:18:47 7887] Tracer actions:
+[T 21:18:47 7887] pre_invocations(0)
+[T 21:18:47 7887] post_invocations(0)
+[T 21:18:47 7887] trace_languages(1): [java]
+[T 21:18:47 7888] Attempting to switch stdout/stderr to 4...
+/Users/joaojunqueira/IdeaProjects/SecureCard/SecureCardDB/working/copy-root/000001F6/bin/chmod.semmle.00001ECF.28CB63D0.slice.x86_64: replacing existing signature
+[T 21:18:47 7887] Initializing tracer.
+[T 21:18:47 7887] Initialising tags...
+[T 21:18:47 7887] ID set to 0000000000001ECF_0000000000000002 (parent 0000000000001ECF_0000000000000001)
+[T 21:18:47 7887] ==== Candidate to intercept: /bin/chmod (canonical: /bin/chmod) ====
+[T 21:18:47 7887] Lua: === Intercepted call to /bin/chmod ===
+[T 21:18:47 7887] Executing the following tracer actions:
+[T 21:18:47 7887] Tracer actions:
+[T 21:18:47 7887] pre_invocations(0)
+[T 21:18:47 7887] post_invocations(0)
+[T 21:18:47 7887] trace_languages(1): [java]
+[T 21:18:47 7891] Initializing tracer.
+[T 21:18:47 7891] Initialising tags...
+[T 21:18:47 7891] ID set to 0000000000001ED3_0000000000000001 (parent 0000000000001EBA_0000000000000001)
+[T 21:18:47 7891] ==== Candidate to intercept: /Users/joaojunqueira/codeql/tools/osx64/java/lib/jspawnhelper (canonical: /Users/joaojunqueira/codeql/tools/osx64/java/lib/jspawnhelper) ====
+[T 21:18:47 7891] Lua: === Intercepted call to /users/joaojunqueira/codeql/tools/osx64/java/lib/jspawnhelper ===
+[T 21:18:47 7891] Executing the following tracer actions:
+[T 21:18:47 7891] Tracer actions:
+[T 21:18:47 7891] pre_invocations(0)
+[T 21:18:47 7891] post_invocations(0)
+[T 21:18:47 7891] trace_languages(1): [java]
+[T 21:18:47 7892] Attempting to switch stdout/stderr to 4...
+/Users/joaojunqueira/IdeaProjects/SecureCard/SecureCardDB/working/copy-root/000001F6/bin/sh.semmle.00001ED3.3B4DAFB8.slice.x86_64: replacing existing signature
+[T 21:18:48 7891] Initializing tracer.
+[T 21:18:48 7891] Initialising tags...
+[T 21:18:48 7891] ID set to 0000000000001ED3_0000000000000002 (parent 0000000000001ED3_0000000000000001)
+[T 21:18:48 7891] ==== Candidate to intercept: ./gradlew (canonical: /Users/joaojunqueira/IdeaProjects/SecureCard/gradlew) ====
+[T 21:18:48 7891] Lua: === Intercepted call to /users/joaojunqueira/ideaprojects/securecard/gradlew ===
+[T 21:18:48 7891] Executing the following tracer actions:
+[T 21:18:48 7891] Tracer actions:
+[T 21:18:48 7891] pre_invocations(0)
+[T 21:18:48 7891] post_invocations(0)
+[T 21:18:48 7891] trace_languages(1): [java]
+[T 21:18:48 7891] Initializing tracer.
+[T 21:18:48 7891] Initialising tags...
+[T 21:18:48 7891] ID set to 0000000000001ED3_0000000000000003 (parent 0000000000001ED3_0000000000000002)
+[T 21:18:48 7891] ==== Candidate to intercept: /bin/bash (canonical: /bin/bash) ====
+[T 21:18:48 7891] Lua: === Intercepted call to /bin/bash ===
+[T 21:18:48 7891] Executing the following tracer actions:
+[T 21:18:48 7891] Tracer actions:
+[T 21:18:48 7891] pre_invocations(0)
+[T 21:18:48 7891] post_invocations(0)
+[T 21:18:48 7891] trace_languages(1): [java]
+[T 21:18:48 7897] Attempting to switch stdout/stderr to 3...
+/Users/joaojunqueira/IdeaProjects/SecureCard/SecureCardDB/working/copy-root/000001F6/usr/bin/uname.semmle.00001ED8.12209060.slice.x86_64: replacing existing signature
+[T 21:18:48 7896] Initializing tracer.
+[T 21:18:48 7896] Initialising tags...
+[T 21:18:48 7896] ID set to 0000000000001ED8_0000000000000001 (parent 0000000000001ED3_0000000000000003)
+[T 21:18:48 7896] ==== Candidate to intercept: /usr/bin/uname (canonical: /usr/bin/uname) ====
+[T 21:18:48 7896] Lua: === Intercepted call to /usr/bin/uname ===
+[T 21:18:48 7896] Executing the following tracer actions:
+[T 21:18:48 7896] Tracer actions:
+[T 21:18:48 7896] pre_invocations(0)
+[T 21:18:48 7896] post_invocations(0)
+[T 21:18:48 7896] trace_languages(1): [java]
+[T 21:18:48 7901] Attempting to switch stdout/stderr to 3...
+/Users/joaojunqueira/IdeaProjects/SecureCard/SecureCardDB/working/copy-root/000001F6/usr/bin/which.semmle.00001EDC.23C662E0.slice.x86_64: replacing existing signature
+[T 21:18:48 7900] Initializing tracer.
+[T 21:18:48 7900] Initialising tags...
+[T 21:18:48 7900] ID set to 0000000000001EDC_0000000000000001 (parent 0000000000001ED3_0000000000000003)
+[T 21:18:48 7900] ==== Candidate to intercept: /usr/bin/which (canonical: /usr/bin/which) ====
+[T 21:18:48 7900] Lua: === Intercepted call to /usr/bin/which ===
+[T 21:18:48 7900] Executing the following tracer actions:
+[T 21:18:48 7900] Tracer actions:
+[T 21:18:48 7900] pre_invocations(0)
+[T 21:18:48 7900] post_invocations(0)
+[T 21:18:48 7900] trace_languages(1): [java]
+[T 21:18:48 7909] Attempting to switch stdout/stderr to 3...
+[T 21:18:48 7910] Attempting to switch stdout/stderr to 3...
+[T 21:18:48 7911] Attempting to switch stdout/stderr to 3...
+/Users/joaojunqueira/IdeaProjects/SecureCard/SecureCardDB/working/copy-root/000001F6/usr/bin/sed.semmle.00001EE3.36392250.slice.x86_64: replacing existing signature
+/Users/joaojunqueira/IdeaProjects/SecureCard/SecureCardDB/working/copy-root/000001F6/usr/bin/xargs.semmle.00001EE2.36481A58.slice.x86_64: replacing existing signature
+/Users/joaojunqueira/IdeaProjects/SecureCard/SecureCardDB/working/copy-root/000001F6/usr/bin/tr.semmle.00001EE4.363C8968.slice.x86_64: replacing existing signature
+[T 21:18:49 7906] Initializing tracer.
+[T 21:18:49 7906] Initialising tags...
+[T 21:18:49 7906] ID set to 0000000000001EE2_0000000000000001 (parent 0000000000001ED3_0000000000000003)
+[T 21:18:49 7906] ==== Candidate to intercept: /usr/bin/xargs (canonical: /usr/bin/xargs) ====
+[T 21:18:49 7906] Lua: === Intercepted call to /usr/bin/xargs ===
+[T 21:18:49 7906] Executing the following tracer actions:
+[T 21:18:49 7906] Tracer actions:
+[T 21:18:49 7906] pre_invocations(0)
+[T 21:18:49 7906] post_invocations(0)
+[T 21:18:49 7906] trace_languages(1): [java]
+[T 21:18:49 7918] Attempting to switch stdout/stderr to 3...
+/Users/joaojunqueira/IdeaProjects/SecureCard/SecureCardDB/working/copy-root/000001F6/bin/echo.semmle.00001EE2.0D067518.slice.x86_64: replacing existing signature
+[T 21:18:49 7907] Initializing tracer.
+[T 21:18:49 7907] Initialising tags...
+[T 21:18:49 7907] ID set to 0000000000001EE3_0000000000000001 (parent 0000000000001ED3_0000000000000003)
+[T 21:18:49 7907] ==== Candidate to intercept: /usr/bin/sed (canonical: /usr/bin/sed) ====
+[T 21:18:49 7907] Lua: === Intercepted call to /usr/bin/sed ===
+[T 21:18:49 7907] Executing the following tracer actions:
+[T 21:18:49 7907] Tracer actions:
+[T 21:18:49 7907] pre_invocations(0)
+[T 21:18:49 7907] post_invocations(0)
+[T 21:18:49 7907] trace_languages(1): [java]
+[T 21:18:49 7908] Initializing tracer.
+[T 21:18:49 7908] Initialising tags...
+[T 21:18:49 7908] ID set to 0000000000001EE4_0000000000000001 (parent 0000000000001ED3_0000000000000003)
+[T 21:18:49 7908] ==== Candidate to intercept: /usr/bin/tr (canonical: /usr/bin/tr) ====
+[T 21:18:49 7908] Lua: === Intercepted call to /usr/bin/tr ===
+[T 21:18:49 7908] Executing the following tracer actions:
+[T 21:18:49 7908] Tracer actions:
+[T 21:18:49 7908] pre_invocations(0)
+[T 21:18:49 7908] post_invocations(0)
+[T 21:18:49 7908] trace_languages(1): [java]
+[T 21:18:49 7924] Initializing tracer.
+[T 21:18:49 7924] Initialising tags...
+[T 21:18:49 7924] ID set to 0000000000001EF4_0000000000000001 (parent 0000000000001EE2_0000000000000001)
+[T 21:18:49 7924] ==== Candidate to intercept: /bin/echo (canonical: /bin/echo) ====
+[T 21:18:49 7924] Lua: === Intercepted call to /bin/echo ===
+[T 21:18:49 7924] Executing the following tracer actions:
+[T 21:18:49 7924] Tracer actions:
+[T 21:18:49 7924] pre_invocations(0)
+[T 21:18:49 7924] post_invocations(0)
+[T 21:18:49 7924] trace_languages(1): [java]
+[T 21:18:49 7926] Initializing tracer.
+[T 21:18:49 7926] Initialising tags...
+[T 21:18:49 7926] ID set to 0000000000001EF6_0000000000000001 (parent 0000000000001EE2_0000000000000001)
+[T 21:18:49 7926] ==== Candidate to intercept: /bin/echo (canonical: /bin/echo) ====
+[T 21:18:49 7926] Lua: === Intercepted call to /bin/echo ===
+[T 21:18:49 7926] Executing the following tracer actions:
+[T 21:18:49 7926] Tracer actions:
+[T 21:18:49 7926] pre_invocations(0)
+[T 21:18:49 7926] post_invocations(0)
+[T 21:18:49 7926] trace_languages(1): [java]
+[T 21:18:49 7927] Attempting to switch stdout/stderr to 3...
+/Users/joaojunqueira/IdeaProjects/SecureCard/SecureCardDB/working/copy-root/000001F6/usr/bin/java.semmle.00001ED3.32FEB3E8.slice.x86_64: replacing existing signature
+[T 21:18:50 7891] Initializing tracer.
+[T 21:18:50 7891] Initialising tags...
+[T 21:18:50 7891] ID set to 0000000000001ED3_0000000000000004 (parent 0000000000001ED3_0000000000000003)
+[T 21:18:50 7891] ==== Candidate to intercept: /usr/bin/java (canonical: /usr/bin/java) ====
+[T 21:18:50 7891] Lua: === Intercepted call to /usr/bin/java ===
+[T 21:18:50 7891] Executing the following tracer actions:
+[T 21:18:50 7891] Tracer actions:
+[T 21:18:50 7891] pre_invocations(0)
+[T 21:18:50 7891] post_invocations(0)
+[T 21:18:50 7891] trace_languages(1): [java]
+[T 21:18:50 7930] Attempting to switch stdout/stderr to 3...
+/Applications/Xcode-14.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/joaojunqueira/IdeaProjects/SecureCard/SecureCardDB/working/copy-root/000001F6/Users/joaojunqueira/Library/Java/JavaVirtualMachines/openjdk-19.0.2/Contents/Home/bin/java.semmle.00001ED3.0AB3E610.slice.x86_64
+/Applications/Xcode-14.2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/install_name_tool: warning: changes being made to the file will invalidate the code signature in: /Users/joaojunqueira/IdeaProjects/SecureCard/SecureCardDB/working/copy-root/000001F6/Users/joaojunqueira/Library/Java/JavaVirtualMachines/openjdk-19.0.2/Contents/Home/bin/java.semmle.00001ED3.0AB3E610.slice.x86_64
+/Users/joaojunqueira/IdeaProjects/SecureCard/SecureCardDB/working/copy-root/000001F6/Users/joaojunqueira/Library/Java/JavaVirtualMachines/openjdk-19.0.2/Contents/Home/bin/java.semmle.00001ED3.0AB3E610.slice.x86_64: replacing existing signature
+[T 21:18:50 7891] Initializing tracer.
+[T 21:18:50 7891] Initialising tags...
+[T 21:18:50 7891] ID set to 0000000000001ED3_0000000000000005 (parent 0000000000001ED3_0000000000000004)
+[T 21:18:50 7891] ==== Candidate to intercept: /Users/joaojunqueira/Library/Java/JavaVirtualMachines/openjdk-19.0.2/Contents/Home/bin/java (canonical: /Users/joaojunqueira/Library/Java/JavaVirtualMachines/openjdk-19.0.2/Contents/Home/bin/java) ====
+[T 21:18:50 7891] Lua: === Intercepted call to /users/joaojunqueira/library/java/javavirtualmachines/openjdk-19.0.2/contents/home/bin/java ===
+[T 21:18:50 7891] Executing the following tracer actions:
+[T 21:18:50 7891] Tracer actions:
+[T 21:18:50 7891] pre_invocations(0)
+[T 21:18:50 7891] post_invocations(0)
+[T 21:18:50 7891] trace_languages(1): [java]
+[T 21:18:50 7891] Passing through -javaagent:/Users/joaojunqueira/codeql/java/tools/codeql-java-agent.jar=ignore-project,java,kotlin to underlying JVM.
+[T 21:18:50 7891] Passing through -Xbootclasspath/a:/Users/joaojunqueira/codeql/java/tools/codeql-java-agent.jar to underlying JVM.
+[T 21:18:50 7891] Intercepted JVM creation with extra hidden args: ['-javaagent:/Users/joaojunqueira/codeql/java/tools/codeql-java-agent.jar=ignore-project,java,kotlin' '-Xbootclasspath/a:/Users/joaojunqueira/codeql/java/tools/codeql-java-agent.jar' ] (result: 1, 0).
+[T 21:18:51 7936] Attempting to switch stdout/stderr to 151...
+/Users/joaojunqueira/IdeaProjects/SecureCard/SecureCardDB/working/copy-root/000001F6/Users/joaojunqueira/Library/Java/JavaVirtualMachines/openjdk-19.0.2/Contents/Home/lib/jspawnhelper.semmle.00001ED3.25E6D5C8.slice.x86_64: replacing existing signature
+[T 21:18:52 7939] Initializing tracer.
+[T 21:18:52 7939] Initialising tags...
+[T 21:18:52 7939] ID set to 0000000000001F03_0000000000000001 (parent 0000000000001ED3_0000000000000005)
+[T 21:18:52 7939] ==== Candidate to intercept: /Users/joaojunqueira/Library/Java/JavaVirtualMachines/openjdk-19.0.2/Contents/Home/lib/jspawnhelper (canonical: /Users/joaojunqueira/Library/Java/JavaVirtualMachines/openjdk-19.0.2/Contents/Home/lib/jspawnhelper) ====
+[T 21:18:52 7939] Lua: === Intercepted call to /users/joaojunqueira/library/java/javavirtualmachines/openjdk-19.0.2/contents/home/lib/jspawnhelper ===
+[T 21:18:52 7939] Executing the following tracer actions:
+[T 21:18:52 7939] Tracer actions:
+[T 21:18:52 7939] pre_invocations(0)
+[T 21:18:52 7939] post_invocations(0)
+[T 21:18:52 7939] trace_languages(1): [java]
+[T 21:18:52 7939] Initializing tracer.
+[T 21:18:52 7939] Initialising tags...
+[T 21:18:52 7939] ID set to 0000000000001F03_0000000000000002 (parent 0000000000001F03_0000000000000001)
+[T 21:18:52 7939] ==== Candidate to intercept: /Users/joaojunqueira/Library/Java/JavaVirtualMachines/openjdk-19.0.2/Contents/Home/bin/java (canonical: /Users/joaojunqueira/Library/Java/JavaVirtualMachines/openjdk-19.0.2/Contents/Home/bin/java) ====
+[T 21:18:52 7939] Lua: === Intercepted call to /users/joaojunqueira/library/java/javavirtualmachines/openjdk-19.0.2/contents/home/bin/java ===
+[T 21:18:52 7939] Executing the following tracer actions:
+[T 21:18:52 7939] Tracer actions:
+[T 21:18:52 7939] pre_invocations(0)
+[T 21:18:52 7939] post_invocations(0)
+[T 21:18:52 7939] trace_languages(1): [java]
+[T 21:18:52 7939] Passing through -javaagent:/Users/joaojunqueira/codeql/java/tools/codeql-java-agent.jar=ignore-project,java,kotlin to underlying JVM.
+[T 21:18:52 7939] Passing through -Xbootclasspath/a:/Users/joaojunqueira/codeql/java/tools/codeql-java-agent.jar to underlying JVM.
+[T 21:18:52 7939] Intercepted JVM creation with extra hidden args: ['-javaagent:/Users/joaojunqueira/codeql/java/tools/codeql-java-agent.jar=ignore-project,java,kotlin' '-Xbootclasspath/a:/Users/joaojunqueira/codeql/java/tools/codeql-java-agent.jar' ] (result: 1, 0).
+[T 21:19:00 7943] Initializing tracer.
+[T 21:19:00 7943] Initialising tags...
+[T 21:19:00 7943] ID set to 0000000000001F07_0000000000000001 (parent 0000000000001EBA_0000000000000001)
+[T 21:19:00 7943] ==== Candidate to intercept: /Users/joaojunqueira/codeql/tools/osx64/java/lib/jspawnhelper (canonical: /Users/joaojunqueira/codeql/tools/osx64/java/lib/jspawnhelper) ====
+[T 21:19:00 7943] Lua: === Intercepted call to /users/joaojunqueira/codeql/tools/osx64/java/lib/jspawnhelper ===
+[T 21:19:00 7943] Executing the following tracer actions:
+[T 21:19:00 7943] Tracer actions:
+[T 21:19:00 7943] pre_invocations(0)
+[T 21:19:00 7943] post_invocations(0)
+[T 21:19:00 7943] trace_languages(1): [java]
+[T 21:19:00 7943] Initializing tracer.
+[T 21:19:00 7943] Initialising tags...
+[T 21:19:00 7943] ID set to 0000000000001F07_0000000000000002 (parent 0000000000001F07_0000000000000001)
+[T 21:19:00 7943] ==== Candidate to intercept: ./gradlew (canonical: /Users/joaojunqueira/IdeaProjects/SecureCard/gradlew) ====
+[T 21:19:00 7943] Lua: === Intercepted call to /users/joaojunqueira/ideaprojects/securecard/gradlew ===
+[T 21:19:00 7943] Executing the following tracer actions:
+[T 21:19:00 7943] Tracer actions:
+[T 21:19:00 7943] pre_invocations(0)
+[T 21:19:00 7943] post_invocations(0)
+[T 21:19:00 7943] trace_languages(1): [java]
+[T 21:19:00 7943] Initializing tracer.
+[T 21:19:00 7943] Initialising tags...
+[T 21:19:00 7943] ID set to 0000000000001F07_0000000000000003 (parent 0000000000001F07_0000000000000002)
+[T 21:19:00 7943] ==== Candidate to intercept: /bin/bash (canonical: /bin/bash) ====
+[T 21:19:00 7943] Lua: === Intercepted call to /bin/bash ===
+[T 21:19:00 7943] Executing the following tracer actions:
+[T 21:19:00 7943] Tracer actions:
+[T 21:19:00 7943] pre_invocations(0)
+[T 21:19:00 7943] post_invocations(0)
+[T 21:19:00 7943] trace_languages(1): [java]
+[T 21:19:01 7946] Initializing tracer.
+[T 21:19:01 7946] Initialising tags...
+[T 21:19:01 7946] ID set to 0000000000001F0A_0000000000000001 (parent 0000000000001F07_0000000000000003)
+[T 21:19:01 7946] ==== Candidate to intercept: /usr/bin/uname (canonical: /usr/bin/uname) ====
+[T 21:19:01 7946] Lua: === Intercepted call to /usr/bin/uname ===
+[T 21:19:01 7946] Executing the following tracer actions:
+[T 21:19:01 7946] Tracer actions:
+[T 21:19:01 7946] pre_invocations(0)
+[T 21:19:01 7946] post_invocations(0)
+[T 21:19:01 7946] trace_languages(1): [java]
+[T 21:19:01 7947] Initializing tracer.
+[T 21:19:01 7947] Initialising tags...
+[T 21:19:01 7947] ID set to 0000000000001F0B_0000000000000001 (parent 0000000000001F07_0000000000000003)
+[T 21:19:01 7947] ==== Candidate to intercept: /usr/bin/which (canonical: /usr/bin/which) ====
+[T 21:19:01 7947] Lua: === Intercepted call to /usr/bin/which ===
+[T 21:19:01 7947] Executing the following tracer actions:
+[T 21:19:01 7947] Tracer actions:
+[T 21:19:01 7947] pre_invocations(0)
+[T 21:19:01 7947] post_invocations(0)
+[T 21:19:01 7947] trace_languages(1): [java]
+[T 21:19:01 7952] Initializing tracer.
+[T 21:19:01 7952] Initialising tags...
+[T 21:19:01 7950] Initializing tracer.
+[T 21:19:01 7950] Initialising tags...
+[T 21:19:01 7952] ID set to 0000000000001F10_0000000000000001 (parent 0000000000001F07_0000000000000003)
+[T 21:19:01 7952] ==== Candidate to intercept: /usr/bin/tr (canonical: /usr/bin/tr) ====
+[T 21:19:01 7951] Initializing tracer.
+[T 21:19:01 7950] ID set to 0000000000001F0E_0000000000000001 (parent 0000000000001F07_0000000000000003)
+[T 21:19:01 7951] Initialising tags...
+[T 21:19:01 7950] ==== Candidate to intercept: /usr/bin/xargs (canonical: /usr/bin/xargs) ====
+[T 21:19:01 7951] ID set to 0000000000001F0F_0000000000000001 (parent 0000000000001F07_0000000000000003)
+[T 21:19:01 7952] Lua: === Intercepted call to /usr/bin/tr ===
+[T 21:19:01 7951] ==== Candidate to intercept: /usr/bin/sed (canonical: /usr/bin/sed) ====
+[T 21:19:01 7952] Executing the following tracer actions:
+[T 21:19:01 7952] Tracer actions:
+[T 21:19:01 7952] pre_invocations(0)
+[T 21:19:01 7952] post_invocations(0)
+[T 21:19:01 7952] trace_languages(1): [java]
+[T 21:19:01 7950] Lua: === Intercepted call to /usr/bin/xargs ===
+[T 21:19:01 7950] Executing the following tracer actions:
+[T 21:19:01 7950] Tracer actions:
+[T 21:19:01 7950] pre_invocations(0)
+[T 21:19:01 7950] post_invocations(0)
+[T 21:19:01 7950] trace_languages(1): [java]
+[T 21:19:01 7951] Lua: === Intercepted call to /usr/bin/sed ===
+[T 21:19:01 7951] Executing the following tracer actions:
+[T 21:19:01 7951] Tracer actions:
+[T 21:19:01 7951] pre_invocations(0)
+[T 21:19:01 7951] post_invocations(0)
+[T 21:19:01 7951] trace_languages(1): [java]
+[T 21:19:01 7953] Initializing tracer.
+[T 21:19:01 7953] Initialising tags...
+[T 21:19:01 7953] ID set to 0000000000001F11_0000000000000001 (parent 0000000000001F0E_0000000000000001)
+[T 21:19:01 7953] ==== Candidate to intercept: /bin/echo (canonical: /bin/echo) ====
+[T 21:19:01 7953] Lua: === Intercepted call to /bin/echo ===
+[T 21:19:01 7953] Executing the following tracer actions:
+[T 21:19:01 7953] Tracer actions:
+[T 21:19:01 7953] pre_invocations(0)
+[T 21:19:01 7953] post_invocations(0)
+[T 21:19:01 7953] trace_languages(1): [java]
+[T 21:19:01 7954] Initializing tracer.
+[T 21:19:01 7954] Initialising tags...
+[T 21:19:01 7954] ID set to 0000000000001F12_0000000000000001 (parent 0000000000001F0E_0000000000000001)
+[T 21:19:01 7954] ==== Candidate to intercept: /bin/echo (canonical: /bin/echo) ====
+[T 21:19:01 7954] Lua: === Intercepted call to /bin/echo ===
+[T 21:19:01 7954] Executing the following tracer actions:
+[T 21:19:01 7954] Tracer actions:
+[T 21:19:01 7954] pre_invocations(0)
+[T 21:19:01 7954] post_invocations(0)
+[T 21:19:01 7954] trace_languages(1): [java]
+[T 21:19:01 7943] Initializing tracer.
+[T 21:19:01 7943] Initialising tags...
+[T 21:19:01 7943] ID set to 0000000000001F07_0000000000000004 (parent 0000000000001F07_0000000000000003)
+[T 21:19:01 7943] ==== Candidate to intercept: /usr/bin/java (canonical: /usr/bin/java) ====
+[T 21:19:01 7943] Lua: === Intercepted call to /usr/bin/java ===
+[T 21:19:01 7943] Executing the following tracer actions:
+[T 21:19:01 7943] Tracer actions:
+[T 21:19:01 7943] pre_invocations(0)
+[T 21:19:01 7943] post_invocations(0)
+[T 21:19:01 7943] trace_languages(1): [java]
+[T 21:19:01 7943] Initializing tracer.
+[T 21:19:01 7943] Initialising tags...
+[T 21:19:01 7943] ID set to 0000000000001F07_0000000000000005 (parent 0000000000001F07_0000000000000004)
+[T 21:19:01 7943] ==== Candidate to intercept: /Users/joaojunqueira/Library/Java/JavaVirtualMachines/openjdk-19.0.2/Contents/Home/bin/java (canonical: /Users/joaojunqueira/Library/Java/JavaVirtualMachines/openjdk-19.0.2/Contents/Home/bin/java) ====
+[T 21:19:01 7943] Lua: === Intercepted call to /users/joaojunqueira/library/java/javavirtualmachines/openjdk-19.0.2/contents/home/bin/java ===
+[T 21:19:01 7943] Executing the following tracer actions:
+[T 21:19:01 7943] Tracer actions:
+[T 21:19:01 7943] pre_invocations(0)
+[T 21:19:01 7943] post_invocations(0)
+[T 21:19:01 7943] trace_languages(1): [java]
+[T 21:19:01 7943] Passing through -javaagent:/Users/joaojunqueira/codeql/java/tools/codeql-java-agent.jar=ignore-project,java,kotlin to underlying JVM.
+[T 21:19:01 7943] Passing through -Xbootclasspath/a:/Users/joaojunqueira/codeql/java/tools/codeql-java-agent.jar to underlying JVM.
+[T 21:19:01 7943] Intercepted JVM creation with extra hidden args: ['-javaagent:/Users/joaojunqueira/codeql/java/tools/codeql-java-agent.jar=ignore-project,java,kotlin' '-Xbootclasspath/a:/Users/joaojunqueira/codeql/java/tools/codeql-java-agent.jar' ] (result: 1, 0).
+[T 21:19:02 7955] Initializing tracer.
+[T 21:19:02 7955] Initialising tags...
+[T 21:19:02 7955] ID set to 0000000000001F13_0000000000000001 (parent 0000000000001F07_0000000000000005)
+[T 21:19:02 7955] ==== Candidate to intercept: /Users/joaojunqueira/Library/Java/JavaVirtualMachines/openjdk-19.0.2/Contents/Home/lib/jspawnhelper (canonical: /Users/joaojunqueira/Library/Java/JavaVirtualMachines/openjdk-19.0.2/Contents/Home/lib/jspawnhelper) ====
+[T 21:19:02 7955] Lua: === Intercepted call to /users/joaojunqueira/library/java/javavirtualmachines/openjdk-19.0.2/contents/home/lib/jspawnhelper ===
+[T 21:19:02 7955] Executing the following tracer actions:
+[T 21:19:02 7955] Tracer actions:
+[T 21:19:02 7955] pre_invocations(0)
+[T 21:19:02 7955] post_invocations(0)
+[T 21:19:02 7955] trace_languages(1): [java]
+[T 21:19:02 7955] Initializing tracer.
+[T 21:19:02 7955] Initialising tags...
+[T 21:19:02 7955] ID set to 0000000000001F13_0000000000000002 (parent 0000000000001F13_0000000000000001)
+[T 21:19:02 7955] ==== Candidate to intercept: /Users/joaojunqueira/Library/Java/JavaVirtualMachines/openjdk-19.0.2/Contents/Home/bin/java (canonical: /Users/joaojunqueira/Library/Java/JavaVirtualMachines/openjdk-19.0.2/Contents/Home/bin/java) ====
+[T 21:19:02 7955] Lua: === Intercepted call to /users/joaojunqueira/library/java/javavirtualmachines/openjdk-19.0.2/contents/home/bin/java ===
+[T 21:19:02 7955] Executing the following tracer actions:
+[T 21:19:02 7955] Tracer actions:
+[T 21:19:02 7955] pre_invocations(0)
+[T 21:19:02 7955] post_invocations(0)
+[T 21:19:02 7955] trace_languages(1): [java]
+[T 21:19:02 7955] Passing through -javaagent:/Users/joaojunqueira/codeql/java/tools/codeql-java-agent.jar=ignore-project,java,kotlin to underlying JVM.
+[T 21:19:02 7955] Passing through -Xbootclasspath/a:/Users/joaojunqueira/codeql/java/tools/codeql-java-agent.jar to underlying JVM.
+[T 21:19:02 7955] Intercepted JVM creation with extra hidden args: ['-javaagent:/Users/joaojunqueira/codeql/java/tools/codeql-java-agent.jar=ignore-project,java,kotlin' '-Xbootclasspath/a:/Users/joaojunqueira/codeql/java/tools/codeql-java-agent.jar' ] (result: 1, 0).
+[T 21:19:11 7959] Initializing tracer.
+[T 21:19:11 7959] Initialising tags...
+[T 21:19:11 7959] ID set to 0000000000001F17_0000000000000001 (parent 0000000000001F13_0000000000000002)
+[T 21:19:11 7959] ==== Candidate to intercept: /Users/joaojunqueira/Library/Java/JavaVirtualMachines/openjdk-19.0.2/Contents/Home/lib/jspawnhelper (canonical: /Users/joaojunqueira/Library/Java/JavaVirtualMachines/openjdk-19.0.2/Contents/Home/lib/jspawnhelper) ====
+[T 21:19:11 7959] Lua: === Intercepted call to /users/joaojunqueira/library/java/javavirtualmachines/openjdk-19.0.2/contents/home/lib/jspawnhelper ===
+[T 21:19:11 7959] Executing the following tracer actions:
+[T 21:19:11 7959] Tracer actions:
+[T 21:19:11 7959] pre_invocations(0)
+[T 21:19:11 7959] post_invocations(0)
+[T 21:19:11 7959] trace_languages(1): [java]
+[T 21:19:11 7959] Initializing tracer.
+[T 21:19:11 7959] Initialising tags...
+[T 21:19:11 7959] ID set to 0000000000001F17_0000000000000002 (parent 0000000000001F17_0000000000000001)
+[T 21:19:11 7959] ==== Candidate to intercept: /Users/joaojunqueira/Library/Java/JavaVirtualMachines/openjdk-19.0.2/Contents/Home/bin/java (canonical: /Users/joaojunqueira/Library/Java/JavaVirtualMachines/openjdk-19.0.2/Contents/Home/bin/java) ====
+[T 21:19:11 7959] Lua: === Intercepted call to /users/joaojunqueira/library/java/javavirtualmachines/openjdk-19.0.2/contents/home/bin/java ===
+[T 21:19:11 7959] Executing the following tracer actions:
+[T 21:19:11 7959] Tracer actions:
+[T 21:19:11 7959] pre_invocations(0)
+[T 21:19:11 7959] post_invocations(0)
+[T 21:19:11 7959] trace_languages(1): [java]
+[T 21:19:11 7959] Passing through -javaagent:/Users/joaojunqueira/codeql/java/tools/codeql-java-agent.jar=ignore-project,java,kotlin to underlying JVM.
+[T 21:19:11 7959] Passing through -Xbootclasspath/a:/Users/joaojunqueira/codeql/java/tools/codeql-java-agent.jar to underlying JVM.
+[T 21:19:12 7959] Intercepted JVM creation with extra hidden args: ['-javaagent:/Users/joaojunqueira/codeql/java/tools/codeql-java-agent.jar=ignore-project,java,kotlin' '-Xbootclasspath/a:/Users/joaojunqueira/codeql/java/tools/codeql-java-agent.jar' ] (result: 1, 0).

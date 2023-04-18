@@ -1,0 +1,618 @@
+[2023-04-14 01:12:08] This is codeql database create --threads=0 --language=java /opt/results/codeql-db -s /opt/src
+[2023-04-14 01:12:08] Log file was started late.
+[2023-04-14 01:12:08] [PROGRESS] database create> Initializing database at /opt/results/codeql-db.
+[2023-04-14 01:12:08] Running plumbing command: codeql database init --language=java --qlconfig-file=/root/qlconfig.yml --source-root=/opt/src --allow-missing-source-root=false --allow-already-existing -- /opt/results/codeql-db
+[2023-04-14 01:12:09] Calling plumbing command: codeql resolve languages --format=json
+[2023-04-14 01:12:10] [DETAILS] resolve languages> Scanning for [codeql-extractor.yml] from /root/codeql-home/codeql/.codeqlmanifest.json
+[2023-04-14 01:12:11] [DETAILS] resolve languages> Parsing /root/codeql-home/codeql/csv/codeql-extractor.yml.
+[2023-04-14 01:12:11] [DETAILS] resolve languages> Parsing /root/codeql-home/codeql/javascript/codeql-extractor.yml.
+[2023-04-14 01:12:11] [DETAILS] resolve languages> Parsing /root/codeql-home/codeql/csharp/codeql-extractor.yml.
+[2023-04-14 01:12:11] [DETAILS] resolve languages> Parsing /root/codeql-home/codeql/ruby/codeql-extractor.yml.
+[2023-04-14 01:12:11] [DETAILS] resolve languages> Parsing /root/codeql-home/codeql/properties/codeql-extractor.yml.
+[2023-04-14 01:12:11] [DETAILS] resolve languages> Parsing /root/codeql-home/codeql/xml/codeql-extractor.yml.
+[2023-04-14 01:12:11] [DETAILS] resolve languages> Parsing /root/codeql-home/codeql/python/codeql-extractor.yml.
+[2023-04-14 01:12:11] [DETAILS] resolve languages> Parsing /root/codeql-home/codeql/java/codeql-extractor.yml.
+[2023-04-14 01:12:11] [DETAILS] resolve languages> Parsing /root/codeql-home/codeql/html/codeql-extractor.yml.
+[2023-04-14 01:12:12] [DETAILS] resolve languages> Parsing /root/codeql-home/codeql/go/codeql-extractor.yml.
+[2023-04-14 01:12:12] [DETAILS] resolve languages> Parsing /root/codeql-home/codeql/cpp/codeql-extractor.yml.
+[2023-04-14 01:12:12] Plumbing command codeql resolve languages completed:
+                      {
+                        "extractors" : {
+                          "csv" : [
+                            {
+                              "extractor_root" : "/root/codeql-home/codeql/csv"
+                            }
+                          ],
+                          "javascript" : [
+                            {
+                              "extractor_root" : "/root/codeql-home/codeql/javascript",
+                              "extractor_options" : { }
+                            }
+                          ],
+                          "csharp" : [
+                            {
+                              "extractor_root" : "/root/codeql-home/codeql/csharp",
+                              "extractor_options" : {
+                                "trap" : {
+                                  "title" : "Options pertaining to TRAP.",
+                                  "description" : "Options pertaining to TRAP.",
+                                  "type" : "object",
+                                  "properties" : {
+                                    "compression" : {
+                                      "title" : "Controls compression for the TRAP files written by the extractor.",
+                                      "description" : "This option is only intended for use in debugging the extractor. Accepted values are 'brotli' (the default, to write brotli-compressed TRAP), 'gzip', and 'none' (to write uncompressed TRAP).\n",
+                                      "type" : "string",
+                                      "pattern" : "^(none|gzip|brotli)$"
+                                    }
+                                  }
+                                },
+                                "buildless" : {
+                                  "title" : "Whether to use buildless (standalone) extraction.",
+                                  "description" : "A value indicating, which type of extraction the autobuilder should perform. If 'true', then the standalone extractor will be used, otherwise tracing extraction will be performed. The default is 'false'. Note that buildless extraction will generally yield less accurate analysis results, and should only be used in cases where it is not possible to build the code (for example if it uses inaccessible dependencies).\n",
+                                  "type" : "string",
+                                  "pattern" : "^(false|true)$"
+                                },
+                                "cil" : {
+                                  "title" : "Whether to enable CIL extraction.",
+                                  "description" : "A value indicating, whether CIL extraction should be enabled. The default is 'true'.\n",
+                                  "type" : "string",
+                                  "pattern" : "^(false|true)$"
+                                }
+                              }
+                            }
+                          ],
+                          "ruby" : [
+                            {
+                              "extractor_root" : "/root/codeql-home/codeql/ruby",
+                              "extractor_options" : {
+                                "trap" : {
+                                  "title" : "Options pertaining to TRAP.",
+                                  "description" : "Options pertaining to TRAP.",
+                                  "type" : "object",
+                                  "properties" : {
+                                    "compression" : {
+                                      "title" : "Controls compression for the TRAP files written by the extractor.",
+                                      "description" : "This option is only intended for use in debugging the extractor. Accepted values are 'gzip' (the default, to write gzip-compressed TRAP) and 'none' (to write uncompressed TRAP).\n",
+                                      "type" : "string",
+                                      "pattern" : "^(none|gzip)$"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          ],
+                          "properties" : [
+                            {
+                              "extractor_root" : "/root/codeql-home/codeql/properties"
+                            }
+                          ],
+                          "xml" : [
+                            {
+                              "extractor_root" : "/root/codeql-home/codeql/xml"
+                            }
+                          ],
+                          "python" : [
+                            {
+                              "extractor_root" : "/root/codeql-home/codeql/python"
+                            }
+                          ],
+                          "java" : [
+                            {
+                              "extractor_root" : "/root/codeql-home/codeql/java",
+                              "extractor_options" : {
+                                "exclude" : {
+                                  "title" : "A glob excluding files from analysis.",
+                                  "description" : "A glob indicating what files to exclude from the analysis.\n",
+                                  "type" : "string"
+                                }
+                              }
+                            }
+                          ],
+                          "html" : [
+                            {
+                              "extractor_root" : "/root/codeql-home/codeql/html"
+                            }
+                          ],
+                          "go" : [
+                            {
+                              "extractor_root" : "/root/codeql-home/codeql/go"
+                            }
+                          ],
+                          "cpp" : [
+                            {
+                              "extractor_root" : "/root/codeql-home/codeql/cpp"
+                            }
+                          ]
+                        }
+                      }
+[2023-04-14 01:12:12] [PROGRESS] database init> Calculating baseline information in /opt/src
+[2023-04-14 01:12:12] [SPAMMY] database init> Ignoring the following directories when processing baseline information: .git, .hg, .svn.
+[2023-04-14 01:12:12] [DETAILS] database init> Running command in /opt/src: /root/codeql-home/codeql/tools/linux64/scc --by-file --exclude-dir .git,.hg,.svn --format json --no-large --no-min .
+[2023-04-14 01:12:19] [SPAMMY] database init> Found 12 baseline files for java.
+[2023-04-14 01:12:19] [PROGRESS] database init> Calculated baseline information for languages: java (6.5s).
+[2023-04-14 01:12:20] [PROGRESS] database init> Resolving extractor java.
+[2023-04-14 01:12:20] [DETAILS] database init> Found candidate extractor root for java: /root/codeql-home/codeql/java.
+[2023-04-14 01:12:20] [PROGRESS] database init> Successfully loaded extractor Java (java) from /root/codeql-home/codeql/java.
+[2023-04-14 01:12:20] [PROGRESS] database init> Created skeleton CodeQL database at /opt/results/codeql-db. This in-progress database is ready to be populated by an extractor.
+[2023-04-14 01:12:20] Plumbing command codeql database init completed.
+[2023-04-14 01:12:21] Using autobuild script /root/codeql-home/codeql/java/tools/autobuild.sh.
+[2023-04-14 01:12:21] [DETAILS] database create> Detected autobuild command for Java: /root/codeql-home/codeql/java/tools/autobuild.sh.
+[2023-04-14 01:12:21] [PROGRESS] database create> Running build command: [/root/codeql-home/codeql/java/tools/autobuild.sh]
+[2023-04-14 01:12:21] Running plumbing command: codeql database trace-command --threads=0 --working-dir=/opt/src --index-traceless-dbs --no-db-cluster -- /opt/results/codeql-db /root/codeql-home/codeql/java/tools/autobuild.sh
+[2023-04-14 01:12:22] [PROGRESS] database trace-command> Running command in /opt/src: [/root/codeql-home/codeql/java/tools/autobuild.sh]
+[2023-04-14 01:12:30] [build-stdout] [2023-04-14 01:12:30] Build directory is /opt/src/.
+[2023-04-14 01:12:31] [build-stdout] [2023-04-14 01:12:31] [autobuild] > chmod +x gradlew
+[2023-04-14 01:12:32] [build-stdout] [2023-04-14 01:12:32] [autobuild] > ./gradlew --no-daemon -S -Dorg.gradle.dependency.verification=off --init-script "/tmp/semmleTempDir/init.gradle" clean
+[2023-04-14 01:12:40] [build-stdout] [2023-04-14 01:12:40] [autobuild] Downloading https://services.gradle.org/distributions/gradle-7.6.1-bin.zip
+[2023-04-14 01:12:51] [build-stdout] [2023-04-14 01:12:51] [autobuild] ...........10%............20%...........30%............40%............50%...........60%............70%............80%...........90%............100%
+[2023-04-14 01:12:54] [build-stdout] [2023-04-14 01:12:54] [autobuild] Welcome to Gradle 7.6.1!
+[2023-04-14 01:12:54] [build-stdout] [2023-04-14 01:12:54] [autobuild] Here are the highlights of this release:
+[2023-04-14 01:12:54] [build-stdout] [2023-04-14 01:12:54] [autobuild]  - Added support for Java 19.
+[2023-04-14 01:12:54] [build-stdout] [2023-04-14 01:12:54] [autobuild]  - Introduced `--rerun` flag for individual task rerun.
+[2023-04-14 01:12:54] [build-stdout] [2023-04-14 01:12:54] [autobuild]  - Improved dependency block for test suites to be strongly typed.
+[2023-04-14 01:12:54] [build-stdout] [2023-04-14 01:12:54] [autobuild]  - Added a pluggable system for Java toolchains provisioning.
+[2023-04-14 01:12:54] [build-stdout] [2023-04-14 01:12:54] [autobuild] For more details see https://docs.gradle.org/7.6.1/release-notes.html
+[2023-04-14 01:12:55] [build-stdout] [2023-04-14 01:12:55] [autobuild] To honour the JVM settings for this build a single-use Daemon process will be forked. See https://docs.gradle.org/7.6.1/userguide/gradle_daemon.html#sec:disabling_the_daemon.
+[2023-04-14 01:12:57] [build-stdout] [2023-04-14 01:12:57] [autobuild] Daemon will be stopped at the end of the build 
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] FAILURE: Build failed with an exception.
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] * What went wrong:
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] A problem occurred configuring root project 'SecureCard'.
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] > Could not resolve all files for configuration ':classpath'.
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild]    > Could not resolve org.springframework.boot:spring-boot-gradle-plugin:3.0.5.
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild]      Required by:
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild]          project : > org.springframework.boot:org.springframework.boot.gradle.plugin:3.0.5
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild]       > No matching variant of org.springframework.boot:spring-boot-gradle-plugin:3.0.5 was found. The consumer was configured to find a runtime of a library compatible with Java 11, packaged as a jar, and its dependencies declared externally, as well as attribute 'org.gradle.plugin.api-version' with value '7.6.1' but:
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild]           - Variant 'apiElements' capability org.springframework.boot:spring-boot-gradle-plugin:3.0.5 declares a library, packaged as a jar, and its dependencies declared externally:
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild]               - Incompatible because this component declares an API of a component compatible with Java 17 and the consumer needed a runtime of a component compatible with Java 11
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild]               - Other compatible attribute:
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild]                   - Doesn't say anything about org.gradle.plugin.api-version (required '7.6.1')
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild]           - Variant 'javadocElements' capability org.springframework.boot:spring-boot-gradle-plugin:3.0.5 declares a runtime of a component, and its dependencies declared externally:
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild]               - Incompatible because this component declares documentation and the consumer needed a library
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild]               - Other compatible attributes:
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild]                   - Doesn't say anything about its target Java version (required compatibility with Java 11)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild]                   - Doesn't say anything about its elements (required them packaged as a jar)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild]                   - Doesn't say anything about org.gradle.plugin.api-version (required '7.6.1')
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild]           - Variant 'mavenOptionalApiElements' capability org.springframework.boot:spring-boot-gradle-plugin-maven-optional:3.0.5 declares a library, packaged as a jar, and its dependencies declared externally:
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild]               - Incompatible because this component declares an API of a component compatible with Java 17 and the consumer needed a runtime of a component compatible with Java 11
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild]               - Other compatible attribute:
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild]                   - Doesn't say anything about org.gradle.plugin.api-version (required '7.6.1')
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild]           - Variant 'mavenOptionalRuntimeElements' capability org.springframework.boot:spring-boot-gradle-plugin-maven-optional:3.0.5 declares a runtime of a library, packaged as a jar, and its dependencies declared externally:
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild]               - Incompatible because this component declares a component compatible with Java 17 and the consumer needed a component compatible with Java 11
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild]               - Other compatible attribute:
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild]                   - Doesn't say anything about org.gradle.plugin.api-version (required '7.6.1')
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild]           - Variant 'runtimeElements' capability org.springframework.boot:spring-boot-gradle-plugin:3.0.5 declares a runtime of a library, packaged as a jar, and its dependencies declared externally:
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild]               - Incompatible because this component declares a component compatible with Java 17 and the consumer needed a component compatible with Java 11
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild]               - Other compatible attribute:
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild]                   - Doesn't say anything about org.gradle.plugin.api-version (required '7.6.1')
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild]           - Variant 'sourcesElements' capability org.springframework.boot:spring-boot-gradle-plugin:3.0.5 declares a runtime of a component, and its dependencies declared externally:
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild]               - Incompatible because this component declares documentation and the consumer needed a library
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild]               - Other compatible attributes:
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild]                   - Doesn't say anything about its target Java version (required compatibility with Java 11)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild]                   - Doesn't say anything about its elements (required them packaged as a jar)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild]                   - Doesn't say anything about org.gradle.plugin.api-version (required '7.6.1')
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] * Try:
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] > Run with --info or --debug option to get more log output.
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] > Run with --scan to get full insights.
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] * Exception is:
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] org.gradle.api.ProjectConfigurationException: A problem occurred configuring root project 'SecureCard'.
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.configuration.project.LifecycleProjectEvaluator.wrapException(LifecycleProjectEvaluator.java:84)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.configuration.project.LifecycleProjectEvaluator.addConfigurationFailure(LifecycleProjectEvaluator.java:77)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.configuration.project.LifecycleProjectEvaluator.access$400(LifecycleProjectEvaluator.java:55)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.configuration.project.LifecycleProjectEvaluator$EvaluateProject.lambda$run$0(LifecycleProjectEvaluator.java:111)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.api.internal.project.DefaultProjectStateRegistry$ProjectStateImpl.lambda$applyToMutableState$0(DefaultProjectStateRegistry.java:360)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.api.internal.project.DefaultProjectStateRegistry$ProjectStateImpl.lambda$fromMutableState$1(DefaultProjectStateRegistry.java:383)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.work.DefaultWorkerLeaseService.withReplacedLocks(DefaultWorkerLeaseService.java:345)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.api.internal.project.DefaultProjectStateRegistry$ProjectStateImpl.fromMutableState(DefaultProjectStateRegistry.java:383)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.api.internal.project.DefaultProjectStateRegistry$ProjectStateImpl.applyToMutableState(DefaultProjectStateRegistry.java:359)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.configuration.project.LifecycleProjectEvaluator$EvaluateProject.run(LifecycleProjectEvaluator.java:100)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:47)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:68)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.configuration.project.LifecycleProjectEvaluator.evaluate(LifecycleProjectEvaluator.java:72)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.api.internal.project.DefaultProject.evaluate(DefaultProject.java:762)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.api.internal.project.DefaultProject.evaluate(DefaultProject.java:153)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.api.internal.project.ProjectLifecycleController.lambda$ensureSelfConfigured$1(ProjectLifecycleController.java:63)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.model.StateTransitionController.lambda$doTransition$12(StateTransitionController.java:236)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:247)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:235)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.model.StateTransitionController.lambda$maybeTransitionIfNotCurrentlyTransitioning$9(StateTransitionController.java:196)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:34)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.model.StateTransitionController.maybeTransitionIfNotCurrentlyTransitioning(StateTransitionController.java:192)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.api.internal.project.ProjectLifecycleController.ensureSelfConfigured(ProjectLifecycleController.java:63)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.api.internal.project.DefaultProjectStateRegistry$ProjectStateImpl.ensureConfigured(DefaultProjectStateRegistry.java:334)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.execution.TaskPathProjectEvaluator.configure(TaskPathProjectEvaluator.java:33)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.execution.TaskPathProjectEvaluator.configureHierarchy(TaskPathProjectEvaluator.java:47)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.configuration.DefaultProjectsPreparer.prepareProjects(DefaultProjectsPreparer.java:50)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.configuration.BuildTreePreparingProjectsPreparer.prepareProjects(BuildTreePreparingProjectsPreparer.java:64)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.configuration.BuildOperationFiringProjectsPreparer$ConfigureBuild.run(BuildOperationFiringProjectsPreparer.java:52)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:47)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:68)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.configuration.BuildOperationFiringProjectsPreparer.prepareProjects(BuildOperationFiringProjectsPreparer.java:40)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.initialization.VintageBuildModelController.lambda$prepareProjects$2(VintageBuildModelController.java:84)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.model.StateTransitionController.lambda$doTransition$12(StateTransitionController.java:236)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:247)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:235)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.model.StateTransitionController.lambda$transitionIfNotPreviously$10(StateTransitionController.java:210)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:34)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.model.StateTransitionController.transitionIfNotPreviously(StateTransitionController.java:206)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.initialization.VintageBuildModelController.prepareProjects(VintageBuildModelController.java:84)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.initialization.VintageBuildModelController.prepareToScheduleTasks(VintageBuildModelController.java:71)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.build.DefaultBuildLifecycleController.lambda$prepareToScheduleTasks$2(DefaultBuildLifecycleController.java:129)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.model.StateTransitionController.lambda$doTransition$12(StateTransitionController.java:236)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:247)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:235)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.model.StateTransitionController.lambda$maybeTransition$8(StateTransitionController.java:187)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:34)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.model.StateTransitionController.maybeTransition(StateTransitionController.java:183)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.build.DefaultBuildLifecycleController.prepareToScheduleTasks(DefaultBuildLifecycleController.java:127)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.buildtree.DefaultBuildTreeWorkPreparer.scheduleRequestedTasks(DefaultBuildTreeWorkPreparer.java:36)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.lambda$doScheduleAndRunTasks$3(DefaultBuildTreeLifecycleController.java:96)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.composite.internal.DefaultIncludedBuildTaskGraph.withNewWorkGraph(DefaultIncludedBuildTaskGraph.java:109)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.doScheduleAndRunTasks(DefaultBuildTreeLifecycleController.java:95)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.lambda$scheduleAndRunTasks$1(DefaultBuildTreeLifecycleController.java:76)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.lambda$runBuild$5(DefaultBuildTreeLifecycleController.java:113)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.model.StateTransitionController.lambda$transition$5(StateTransitionController.java:166)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:247)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.model.StateTransitionController.lambda$transition$6(StateTransitionController.java:166)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:44)
+[2023-04-14 01:14:10] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.model.StateTransitionController.transition(StateTransitionController.java:166)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.runBuild(DefaultBuildTreeLifecycleController.java:110)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.scheduleAndRunTasks(DefaultBuildTreeLifecycleController.java:76)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.scheduleAndRunTasks(DefaultBuildTreeLifecycleController.java:71)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.tooling.internal.provider.ExecuteBuildActionRunner.run(ExecuteBuildActionRunner.java:31)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.exec.ChainingBuildActionRunner.run(ChainingBuildActionRunner.java:35)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.buildtree.ProblemReportingBuildActionRunner.run(ProblemReportingBuildActionRunner.java:49)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.exec.BuildOutcomeReportingBuildActionRunner.run(BuildOutcomeReportingBuildActionRunner.java:65)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.tooling.internal.provider.FileSystemWatchingBuildActionRunner.run(FileSystemWatchingBuildActionRunner.java:136)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.exec.BuildCompletionNotifyingBuildActionRunner.run(BuildCompletionNotifyingBuildActionRunner.java:41)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.exec.RootBuildLifecycleBuildActionExecutor.lambda$execute$0(RootBuildLifecycleBuildActionExecutor.java:40)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.composite.internal.DefaultRootBuildState.run(DefaultRootBuildState.java:122)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.exec.RootBuildLifecycleBuildActionExecutor.execute(RootBuildLifecycleBuildActionExecutor.java:40)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.buildtree.DefaultBuildTreeContext.execute(DefaultBuildTreeContext.java:40)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.exec.BuildTreeLifecycleBuildActionExecutor.lambda$execute$0(BuildTreeLifecycleBuildActionExecutor.java:65)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.buildtree.BuildTreeState.run(BuildTreeState.java:53)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.exec.BuildTreeLifecycleBuildActionExecutor.execute(BuildTreeLifecycleBuildActionExecutor.java:65)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.exec.RunAsBuildOperationBuildActionExecutor$3.call(RunAsBuildOperationBuildActionExecutor.java:61)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.exec.RunAsBuildOperationBuildActionExecutor$3.call(RunAsBuildOperationBuildActionExecutor.java:57)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.exec.RunAsBuildOperationBuildActionExecutor.execute(RunAsBuildOperationBuildActionExecutor.java:57)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.exec.RunAsWorkerThreadBuildActionExecutor.lambda$execute$0(RunAsWorkerThreadBuildActionExecutor.java:36)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:249)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:109)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.exec.RunAsWorkerThreadBuildActionExecutor.execute(RunAsWorkerThreadBuildActionExecutor.java:36)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.tooling.internal.provider.continuous.ContinuousBuildActionExecutor.execute(ContinuousBuildActionExecutor.java:110)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.tooling.internal.provider.SubscribableBuildActionExecutor.execute(SubscribableBuildActionExecutor.java:64)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.session.DefaultBuildSessionContext.execute(DefaultBuildSessionContext.java:46)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.tooling.internal.provider.BuildSessionLifecycleBuildActionExecuter$ActionImpl.apply(BuildSessionLifecycleBuildActionExecuter.java:100)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.tooling.internal.provider.BuildSessionLifecycleBuildActionExecuter$ActionImpl.apply(BuildSessionLifecycleBuildActionExecuter.java:88)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.session.BuildSessionState.run(BuildSessionState.java:69)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.tooling.internal.provider.BuildSessionLifecycleBuildActionExecuter.execute(BuildSessionLifecycleBuildActionExecuter.java:62)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.tooling.internal.provider.BuildSessionLifecycleBuildActionExecuter.execute(BuildSessionLifecycleBuildActionExecuter.java:41)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.tooling.internal.provider.StartParamsValidatingActionExecuter.execute(StartParamsValidatingActionExecuter.java:63)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.tooling.internal.provider.StartParamsValidatingActionExecuter.execute(StartParamsValidatingActionExecuter.java:31)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.tooling.internal.provider.SessionFailureReportingActionExecuter.execute(SessionFailureReportingActionExecuter.java:52)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.tooling.internal.provider.SessionFailureReportingActionExecuter.execute(SessionFailureReportingActionExecuter.java:40)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.tooling.internal.provider.SetupLoggingActionExecuter.execute(SetupLoggingActionExecuter.java:47)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.tooling.internal.provider.SetupLoggingActionExecuter.execute(SetupLoggingActionExecuter.java:31)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.exec.ExecuteBuild.doBuild(ExecuteBuild.java:65)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.exec.WatchForDisconnection.execute(WatchForDisconnection.java:39)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.exec.ResetDeprecationLogger.execute(ResetDeprecationLogger.java:29)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.exec.RequestStopIfSingleUsedDaemon.execute(RequestStopIfSingleUsedDaemon.java:35)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.exec.ForwardClientInput$2.create(ForwardClientInput.java:78)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.exec.ForwardClientInput$2.create(ForwardClientInput.java:75)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.util.internal.Swapper.swap(Swapper.java:38)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.exec.ForwardClientInput.execute(ForwardClientInput.java:75)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.exec.LogAndCheckHealth.execute(LogAndCheckHealth.java:50)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.exec.LogToClient.doBuild(LogToClient.java:63)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment.doBuild(EstablishBuildEnvironment.java:84)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy$1.run(StartBuildOrRespondWithBusy.java:52)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.DaemonStateCoordinator$1.run(DaemonStateCoordinator.java:297)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:49)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at java.base/java.lang.Thread.run(Thread.java:829)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] Caused by: org.gradle.api.internal.artifacts.ivyservice.DefaultLenientConfiguration$ArtifactResolveException: Could not resolve all files for configuration ':classpath'.
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration.mapFailure(DefaultConfiguration.java:1537)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration.access$3800(DefaultConfiguration.java:160)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration$DefaultResolutionHost.mapFailure(DefaultConfiguration.java:2189)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration$DefaultResolutionHost.rethrowFailure(DefaultConfiguration.java:2194)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration$ConfigurationFileCollection.visitContents(DefaultConfiguration.java:1505)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.api.internal.file.AbstractFileCollection.getFiles(AbstractFileCollection.java:129)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.api.internal.file.AbstractFileCollection.iterator(AbstractFileCollection.java:175)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.classpath.DefaultClassPath.of(DefaultClassPath.java:56)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.api.internal.initialization.DefaultScriptClassPathResolver.resolveClassPath(DefaultScriptClassPathResolver.java:51)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.api.internal.initialization.DefaultScriptHandler.getNonInstrumentedScriptClassPath(DefaultScriptHandler.java:105)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.plugin.use.internal.DefaultPluginRequestApplicator.defineScriptHandlerClassScope(DefaultPluginRequestApplicator.java:177)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.plugin.use.internal.DefaultPluginRequestApplicator.applyPlugins(DefaultPluginRequestApplicator.java:142)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.kotlin.dsl.provider.PluginRequestsHandler.handle(PluginRequestsHandler.kt:48)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.kotlin.dsl.provider.StandardKotlinScriptEvaluator$InterpreterHost.applyPluginsTo(KotlinScriptEvaluator.kt:195)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.kotlin.dsl.execution.Interpreter$ProgramHost.applyPluginsTo(Interpreter.kt:398)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at Program.execute(Unknown Source)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.kotlin.dsl.execution.Interpreter$ProgramHost.eval(Interpreter.kt:532)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.kotlin.dsl.execution.Interpreter.eval(Interpreter.kt:205)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.kotlin.dsl.provider.StandardKotlinScriptEvaluator.evaluate(KotlinScriptEvaluator.kt:115)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.kotlin.dsl.provider.KotlinScriptPluginFactory$create$1.invoke(KotlinScriptPluginFactory.kt:51)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.kotlin.dsl.provider.KotlinScriptPluginFactory$create$1.invoke(KotlinScriptPluginFactory.kt:36)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.kotlin.dsl.provider.KotlinScriptPlugin.apply(KotlinScriptPlugin.kt:34)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.configuration.BuildOperationScriptPlugin$1.run(BuildOperationScriptPlugin.java:65)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:47)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:68)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.configuration.BuildOperationScriptPlugin.lambda$apply$0(BuildOperationScriptPlugin.java:62)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.configuration.internal.DefaultUserCodeApplicationContext.apply(DefaultUserCodeApplicationContext.java:44)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.configuration.BuildOperationScriptPlugin.apply(BuildOperationScriptPlugin.java:62)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.api.internal.project.DefaultProjectStateRegistry$ProjectStateImpl.lambda$applyToMutableState$0(DefaultProjectStateRegistry.java:360)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.api.internal.project.DefaultProjectStateRegistry$ProjectStateImpl.fromMutableState(DefaultProjectStateRegistry.java:378)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.api.internal.project.DefaultProjectStateRegistry$ProjectStateImpl.applyToMutableState(DefaultProjectStateRegistry.java:359)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.configuration.project.BuildScriptProcessor.execute(BuildScriptProcessor.java:42)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.configuration.project.BuildScriptProcessor.execute(BuildScriptProcessor.java:26)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.configuration.project.ConfigureActionsProjectEvaluator.evaluate(ConfigureActionsProjectEvaluator.java:35)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.configuration.project.LifecycleProjectEvaluator$EvaluateProject.lambda$run$0(LifecycleProjectEvaluator.java:109)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.api.internal.project.DefaultProjectStateRegistry$ProjectStateImpl.lambda$applyToMutableState$0(DefaultProjectStateRegistry.java:360)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.api.internal.project.DefaultProjectStateRegistry$ProjectStateImpl.lambda$fromMutableState$1(DefaultProjectStateRegistry.java:383)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.work.DefaultWorkerLeaseService.withReplacedLocks(DefaultWorkerLeaseService.java:345)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.api.internal.project.DefaultProjectStateRegistry$ProjectStateImpl.fromMutableState(DefaultProjectStateRegistry.java:383)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.api.internal.project.DefaultProjectStateRegistry$ProjectStateImpl.applyToMutableState(DefaultProjectStateRegistry.java:359)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.configuration.project.LifecycleProjectEvaluator$EvaluateProject.run(LifecycleProjectEvaluator.java:100)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:47)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:68)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.configuration.project.LifecycleProjectEvaluator.evaluate(LifecycleProjectEvaluator.java:72)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.api.internal.project.DefaultProject.evaluate(DefaultProject.java:762)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.api.internal.project.DefaultProject.evaluate(DefaultProject.java:153)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.api.internal.project.ProjectLifecycleController.lambda$ensureSelfConfigured$1(ProjectLifecycleController.java:63)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.model.StateTransitionController.lambda$doTransition$12(StateTransitionController.java:236)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:247)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:235)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.model.StateTransitionController.lambda$maybeTransitionIfNotCurrentlyTransitioning$9(StateTransitionController.java:196)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:34)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.model.StateTransitionController.maybeTransitionIfNotCurrentlyTransitioning(StateTransitionController.java:192)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.api.internal.project.ProjectLifecycleController.ensureSelfConfigured(ProjectLifecycleController.java:63)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.api.internal.project.DefaultProjectStateRegistry$ProjectStateImpl.ensureConfigured(DefaultProjectStateRegistry.java:334)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.execution.TaskPathProjectEvaluator.configure(TaskPathProjectEvaluator.java:33)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.execution.TaskPathProjectEvaluator.configureHierarchy(TaskPathProjectEvaluator.java:47)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.configuration.DefaultProjectsPreparer.prepareProjects(DefaultProjectsPreparer.java:50)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.configuration.BuildTreePreparingProjectsPreparer.prepareProjects(BuildTreePreparingProjectsPreparer.java:64)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.configuration.BuildOperationFiringProjectsPreparer$ConfigureBuild.run(BuildOperationFiringProjectsPreparer.java:52)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:47)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:68)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.configuration.BuildOperationFiringProjectsPreparer.prepareProjects(BuildOperationFiringProjectsPreparer.java:40)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.initialization.VintageBuildModelController.lambda$prepareProjects$2(VintageBuildModelController.java:84)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.model.StateTransitionController.lambda$doTransition$12(StateTransitionController.java:236)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:247)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:235)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.model.StateTransitionController.lambda$transitionIfNotPreviously$10(StateTransitionController.java:210)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:34)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.model.StateTransitionController.transitionIfNotPreviously(StateTransitionController.java:206)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.initialization.VintageBuildModelController.prepareProjects(VintageBuildModelController.java:84)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.initialization.VintageBuildModelController.prepareToScheduleTasks(VintageBuildModelController.java:71)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.build.DefaultBuildLifecycleController.lambda$prepareToScheduleTasks$2(DefaultBuildLifecycleController.java:129)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.model.StateTransitionController.lambda$doTransition$12(StateTransitionController.java:236)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:247)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:235)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.model.StateTransitionController.lambda$maybeTransition$8(StateTransitionController.java:187)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:34)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.model.StateTransitionController.maybeTransition(StateTransitionController.java:183)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.build.DefaultBuildLifecycleController.prepareToScheduleTasks(DefaultBuildLifecycleController.java:127)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.buildtree.DefaultBuildTreeWorkPreparer.scheduleRequestedTasks(DefaultBuildTreeWorkPreparer.java:36)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.lambda$doScheduleAndRunTasks$3(DefaultBuildTreeLifecycleController.java:96)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.composite.internal.DefaultIncludedBuildTaskGraph.withNewWorkGraph(DefaultIncludedBuildTaskGraph.java:109)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.doScheduleAndRunTasks(DefaultBuildTreeLifecycleController.java:95)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.lambda$scheduleAndRunTasks$1(DefaultBuildTreeLifecycleController.java:76)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.lambda$runBuild$5(DefaultBuildTreeLifecycleController.java:113)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.model.StateTransitionController.lambda$transition$5(StateTransitionController.java:166)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:247)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.model.StateTransitionController.lambda$transition$6(StateTransitionController.java:166)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:44)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.model.StateTransitionController.transition(StateTransitionController.java:166)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.runBuild(DefaultBuildTreeLifecycleController.java:110)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.scheduleAndRunTasks(DefaultBuildTreeLifecycleController.java:76)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.scheduleAndRunTasks(DefaultBuildTreeLifecycleController.java:71)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.tooling.internal.provider.ExecuteBuildActionRunner.run(ExecuteBuildActionRunner.java:31)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.exec.ChainingBuildActionRunner.run(ChainingBuildActionRunner.java:35)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.buildtree.ProblemReportingBuildActionRunner.run(ProblemReportingBuildActionRunner.java:49)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.exec.BuildOutcomeReportingBuildActionRunner.run(BuildOutcomeReportingBuildActionRunner.java:65)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.tooling.internal.provider.FileSystemWatchingBuildActionRunner.run(FileSystemWatchingBuildActionRunner.java:136)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.exec.BuildCompletionNotifyingBuildActionRunner.run(BuildCompletionNotifyingBuildActionRunner.java:41)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.exec.RootBuildLifecycleBuildActionExecutor.lambda$execute$0(RootBuildLifecycleBuildActionExecutor.java:40)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.composite.internal.DefaultRootBuildState.run(DefaultRootBuildState.java:122)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.exec.RootBuildLifecycleBuildActionExecutor.execute(RootBuildLifecycleBuildActionExecutor.java:40)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.buildtree.DefaultBuildTreeContext.execute(DefaultBuildTreeContext.java:40)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.exec.BuildTreeLifecycleBuildActionExecutor.lambda$execute$0(BuildTreeLifecycleBuildActionExecutor.java:65)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.buildtree.BuildTreeState.run(BuildTreeState.java:53)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.exec.BuildTreeLifecycleBuildActionExecutor.execute(BuildTreeLifecycleBuildActionExecutor.java:65)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.exec.RunAsBuildOperationBuildActionExecutor$3.call(RunAsBuildOperationBuildActionExecutor.java:61)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.exec.RunAsBuildOperationBuildActionExecutor$3.call(RunAsBuildOperationBuildActionExecutor.java:57)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.exec.RunAsBuildOperationBuildActionExecutor.execute(RunAsBuildOperationBuildActionExecutor.java:57)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.exec.RunAsWorkerThreadBuildActionExecutor.lambda$execute$0(RunAsWorkerThreadBuildActionExecutor.java:36)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:249)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:109)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.exec.RunAsWorkerThreadBuildActionExecutor.execute(RunAsWorkerThreadBuildActionExecutor.java:36)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.tooling.internal.provider.continuous.ContinuousBuildActionExecutor.execute(ContinuousBuildActionExecutor.java:110)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.tooling.internal.provider.SubscribableBuildActionExecutor.execute(SubscribableBuildActionExecutor.java:64)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.session.DefaultBuildSessionContext.execute(DefaultBuildSessionContext.java:46)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.tooling.internal.provider.BuildSessionLifecycleBuildActionExecuter$ActionImpl.apply(BuildSessionLifecycleBuildActionExecuter.java:100)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.tooling.internal.provider.BuildSessionLifecycleBuildActionExecuter$ActionImpl.apply(BuildSessionLifecycleBuildActionExecuter.java:88)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.session.BuildSessionState.run(BuildSessionState.java:69)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.tooling.internal.provider.BuildSessionLifecycleBuildActionExecuter.execute(BuildSessionLifecycleBuildActionExecuter.java:62)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.tooling.internal.provider.BuildSessionLifecycleBuildActionExecuter.execute(BuildSessionLifecycleBuildActionExecuter.java:41)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.tooling.internal.provider.StartParamsValidatingActionExecuter.execute(StartParamsValidatingActionExecuter.java:63)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.tooling.internal.provider.StartParamsValidatingActionExecuter.execute(StartParamsValidatingActionExecuter.java:31)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.tooling.internal.provider.SessionFailureReportingActionExecuter.execute(SessionFailureReportingActionExecuter.java:52)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.tooling.internal.provider.SessionFailureReportingActionExecuter.execute(SessionFailureReportingActionExecuter.java:40)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.tooling.internal.provider.SetupLoggingActionExecuter.execute(SetupLoggingActionExecuter.java:47)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.tooling.internal.provider.SetupLoggingActionExecuter.execute(SetupLoggingActionExecuter.java:31)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.exec.ExecuteBuild.doBuild(ExecuteBuild.java:65)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.exec.WatchForDisconnection.execute(WatchForDisconnection.java:39)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.exec.ResetDeprecationLogger.execute(ResetDeprecationLogger.java:29)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.exec.RequestStopIfSingleUsedDaemon.execute(RequestStopIfSingleUsedDaemon.java:35)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.exec.ForwardClientInput$2.create(ForwardClientInput.java:78)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.exec.ForwardClientInput$2.create(ForwardClientInput.java:75)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.util.internal.Swapper.swap(Swapper.java:38)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.exec.ForwardClientInput.execute(ForwardClientInput.java:75)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.exec.LogAndCheckHealth.execute(LogAndCheckHealth.java:50)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.exec.LogToClient.doBuild(LogToClient.java:63)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment.doBuild(EstablishBuildEnvironment.java:84)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.exec.BuildCommandOnly.execute(BuildCommandOnly.java:37)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy$1.run(StartBuildOrRespondWithBusy.java:52)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.launcher.daemon.server.DaemonStateCoordinator$1.run(DaemonStateCoordinator.java:297)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:49)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at java.base/java.lang.Thread.run(Thread.java:829)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] Caused by: org.gradle.internal.resolve.ModuleVersionResolveException: Could not resolve org.springframework.boot:spring-boot-gradle-plugin:3.0.5.
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] Required by:
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild]     project : > org.springframework.boot:org.springframework.boot.gradle.plugin:3.0.5
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] Caused by: org.gradle.internal.component.NoMatchingConfigurationSelectionException: No matching variant of org.springframework.boot:spring-boot-gradle-plugin:3.0.5 was found. The consumer was configured to find a runtime of a library compatible with Java 11, packaged as a jar, and its dependencies declared externally, as well as attribute 'org.gradle.plugin.api-version' with value '7.6.1' but:
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild]   - Variant 'apiElements' capability org.springframework.boot:spring-boot-gradle-plugin:3.0.5 declares a library, packaged as a jar, and its dependencies declared externally:
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild]       - Incompatible because this component declares an API of a component compatible with Java 17 and the consumer needed a runtime of a component compatible with Java 11
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild]       - Incompatible because this component declares a component compatible with Java 17 and the consumer needed a component compatible with Java 11
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild]       - Other compatible attribute:
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild]           - Doesn't say anything about org.gradle.plugin.api-version (required '7.6.1')
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild]   - Variant 'runtimeElements' capability org.springframework.boot:spring-boot-gradle-plugin:3.0.5 declares a runtime of a library, packaged as a jar, and its dependencies declared externally:
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild]       - Incompatible because this component declares a component compatible with Java 17 and the consumer needed a component compatible with Java 11
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild]       - Other compatible attribute:
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild]           - Doesn't say anything about org.gradle.plugin.api-version (required '7.6.1')
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild]   - Variant 'sourcesElements' capability org.springframework.boot:spring-boot-gradle-plugin:3.0.5 declares a runtime of a component, and its dependencies declared externally:
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild]       - Incompatible because this component declares documentation and the consumer needed a library
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild]       - Other compatible attributes:
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild]           - Doesn't say anything about its target Java version (required compatibility with Java 11)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild]           - Doesn't say anything about its elements (required them packaged as a jar)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.component.model.AttributeConfigurationSelector.selectVariantsUsingAttributeMatching(AttributeConfigurationSelector.java:51)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.component.external.model.ConfigurationBoundExternalDependencyMetadata.selectVariants(ConfigurationBoundExternalDependencyMetadata.java:110)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.builder.DependencyGraphBuilder.resolveEdges(DependencyGraphBuilder.java:254)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.builder.DependencyGraphBuilder.traverseGraph(DependencyGraphBuilder.java:191)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.api.internal.artifacts.ivyservice.resolveengine.graph.builder.DependencyGraphBuilder.resolve(DependencyGraphBuilder.java:151)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration.resolveGraphIfRequired(DefaultConfiguration.java:648)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.api.internal.initialization.DefaultScriptClassPathResolver.resolveClassPath(DefaultScriptClassPathResolver.java:51)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.api.internal.initialization.DefaultScriptHandler.getNonInstrumentedScriptClassPath(DefaultScriptHandler.java:105)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.kotlin.dsl.provider.StandardKotlinScriptEvaluator$InterpreterHost.applyPluginsTo(KotlinScriptEvaluator.kt:195)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.kotlin.dsl.execution.Interpreter$ProgramHost.applyPluginsTo(Interpreter.kt:398)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at Program.execute(Unknown Source)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.configuration.BuildOperationScriptPlugin.lambda$apply$0(BuildOperationScriptPlugin.java:62)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.configuration.BuildOperationScriptPlugin.apply(BuildOperationScriptPlugin.java:62)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.api.internal.project.DefaultProjectStateRegistry$ProjectStateImpl.lambda$applyToMutableState$0(DefaultProjectStateRegistry.java:360)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.configuration.project.LifecycleProjectEvaluator$EvaluateProject.lambda$run$0(LifecycleProjectEvaluator.java:109)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:10] [autobuild] 	at org.gradle.api.internal.project.DefaultProjectStateRegistry$ProjectStateImpl.lambda$fromMutableState$1(DefaultProjectStateRegistry.java:383)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:11] [autobuild] 	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:235)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:11] [autobuild] 	at org.gradle.internal.model.StateTransitionController.lambda$maybeTransitionIfNotCurrentlyTransitioning$9(StateTransitionController.java:196)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:11] [autobuild] 	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:34)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:11] [autobuild] 	at org.gradle.internal.model.StateTransitionController.maybeTransitionIfNotCurrentlyTransitioning(StateTransitionController.java:192)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:11] [autobuild] 	at org.gradle.api.internal.project.ProjectLifecycleController.ensureSelfConfigured(ProjectLifecycleController.java:63)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:11] [autobuild] 	at org.gradle.api.internal.project.DefaultProjectStateRegistry$ProjectStateImpl.ensureConfigured(DefaultProjectStateRegistry.java:334)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:11] [autobuild] 	at org.gradle.execution.TaskPathProjectEvaluator.configure(TaskPathProjectEvaluator.java:33)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:11] [autobuild] 	at org.gradle.execution.TaskPathProjectEvaluator.configureHierarchy(TaskPathProjectEvaluator.java:47)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:11] [autobuild] 	at org.gradle.configuration.DefaultProjectsPreparer.prepareProjects(DefaultProjectsPreparer.java:50)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:11] [autobuild] 	at org.gradle.configuration.BuildTreePreparingProjectsPreparer.prepareProjects(BuildTreePreparingProjectsPreparer.java:64)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:11] [autobuild] 	at org.gradle.configuration.BuildOperationFiringProjectsPreparer.prepareProjects(BuildOperationFiringProjectsPreparer.java:40)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:11] [autobuild] 	at org.gradle.initialization.VintageBuildModelController.lambda$prepareProjects$2(VintageBuildModelController.java:84)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:11] [autobuild] 	at org.gradle.internal.model.StateTransitionController.lambda$doTransition$12(StateTransitionController.java:236)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:11] [autobuild] 	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:247)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:11] [autobuild] 	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:235)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:11] [autobuild] 	at org.gradle.internal.model.StateTransitionController.lambda$transitionIfNotPreviously$10(StateTransitionController.java:210)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:11] [autobuild] 	at org.gradle.internal.model.StateTransitionController.transitionIfNotPreviously(StateTransitionController.java:206)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:11] [autobuild] 	at org.gradle.internal.model.StateTransitionController.lambda$transition$5(StateTransitionController.java:166)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:11] [autobuild] 	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:247)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:11] [autobuild] 	at org.gradle.internal.model.StateTransitionController.lambda$transition$6(StateTransitionController.java:166)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:11] [autobuild] 	at org.gradle.internal.buildtree.DefaultBuildTreeLifecycleController.runBuild(DefaultBuildTreeLifecycleController.java:110)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:11] [autobuild] 	at org.gradle.launcher.exec.BuildOutcomeReportingBuildActionRunner.run(BuildOutcomeReportingBuildActionRunner.java:65)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:11] [autobuild] 	at org.gradle.launcher.exec.RootBuildLifecycleBuildActionExecutor.execute(RootBuildLifecycleBuildActionExecutor.java:40)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:11] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:11] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:11] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:11] [autobuild] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:11] [autobuild] 	at org.gradle.tooling.internal.provider.SetupLoggingActionExecuter.execute(SetupLoggingActionExecuter.java:47)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:11] [autobuild] 	at org.gradle.launcher.daemon.server.exec.ResetDeprecationLogger.execute(ResetDeprecationLogger.java:29)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:11] [autobuild] 	at org.gradle.launcher.daemon.server.exec.ForwardClientInput.execute(ForwardClientInput.java:75)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:11] [autobuild] 	at org.gradle.launcher.daemon.server.api.DaemonCommandExecution.proceed(DaemonCommandExecution.java:104)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:11] [autobuild] 	at org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy$1.run(StartBuildOrRespondWithBusy.java:52)
+[2023-04-14 01:14:11] [build-stdout] [2023-04-14 01:14:11] [autobuild] 	at org.gradle.launcher.daemon.server.DaemonStateCoordinator$1.run(DaemonStateCoordinator.java:297)
+[2023-04-14 01:14:12] [build-stdout] [2023-04-14 01:14:12] [ERROR] Spawned process exited abnormally (code 1; tried to run: [./gradlew, --no-daemon, -S, -Dorg.gradle.dependency.verification=off, --init-script, /tmp/semmleTempDir/init.gradle, clean])
+[2023-04-14 01:14:12] [ERROR] Spawned process exited abnormally (code 1; tried to run: [/root/codeql-home/codeql/tools/linux64/preload_tracer, /root/codeql-home/codeql/java/tools/autobuild.sh])
+[2023-04-14 01:14:12] Exception caught at top level: Exit status 1 from command: [/root/codeql-home/codeql/java/tools/autobuild.sh]
+                      com.semmle.cli2.database.DatabaseProcessCommandCommon.executeSubcommand(DatabaseProcessCommandCommon.java:238)
+                      com.semmle.cli2.database.TraceCommandCommand.executeSubcommand(TraceCommandCommand.java:87)
+                      com.semmle.cli2.picocli.SubcommandCommon.lambda$executeSubcommandWithMessages$2(SubcommandCommon.java:671)
+                      com.semmle.cli2.picocli.SubcommandCommon.withCompilationMessages(SubcommandCommon.java:435)
+                      com.semmle.cli2.picocli.SubcommandCommon.executeSubcommandWithMessages(SubcommandCommon.java:670)
+                      com.semmle.cli2.picocli.PlumbingRunner.run(PlumbingRunner.java:109)
+                      com.semmle.cli2.picocli.SubcommandCommon.runPlumbingInProcess(SubcommandCommon.java:208)
+                      com.semmle.cli2.database.CreateCommand.executeSubcommand(CreateCommand.java:151)
+                      com.semmle.cli2.picocli.SubcommandCommon.lambda$executeSubcommandWithMessages$2(SubcommandCommon.java:671)
+                      com.semmle.cli2.picocli.SubcommandCommon.withCompilationMessages(SubcommandCommon.java:435)
+                      com.semmle.cli2.picocli.SubcommandCommon.executeSubcommandWithMessages(SubcommandCommon.java:670)
+                      com.semmle.cli2.picocli.SubcommandCommon.call(SubcommandCommon.java:591)
+                      com.semmle.cli2.picocli.SubcommandMaker.runMain(SubcommandMaker.java:225)
+                      com.semmle.cli2.picocli.SubcommandMaker.runMain(SubcommandMaker.java:234)
+                      com.semmle.cli2.CodeQL.main(CodeQL.java:102)

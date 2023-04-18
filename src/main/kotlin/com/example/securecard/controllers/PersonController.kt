@@ -61,11 +61,25 @@ class PersonController(private val personService: PersonService) {
     }
 
     @PutMapping("/{id}")
-    fun updatePerson(@PathVariable id: Long, @RequestBody updatedPerson: Person): Person {
+    fun updatePerson(@CookieValue("jwt") jwt: String?, @PathVariable id: Long, @RequestBody updatedPerson: Person): Person {
+
+        if(jwt == null) {
+            throw Exception("Unauthenticated!")
+        }
+
         val person = personService.findById(id) ?: throw NotFoundException("Person not found")
         return personService.save(updatedPerson.copy(id = person.id))
     }
 
     @DeleteMapping("/{id}")
-    fun deletePerson(@PathVariable id: Long) = personService.deleteById(id)
+    fun deletePerson(@CookieValue("jwt") jwt: String?, @PathVariable id: Long) {
+
+        if(jwt == null) {
+            throw Exception("Unauthenticated!")
+        }
+
+        val person = personService.findById(id) ?: throw NotFoundException("Person not found")
+
+        return personService.deleteById(person) ?: throw Exception("Error deleting person")
+    }
 }

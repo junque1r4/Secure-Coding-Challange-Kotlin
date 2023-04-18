@@ -1,0 +1,19 @@
+[2023-04-13 21:47:40] This is codeql execute queries -J-Xmx2048M --off-heap-ram=2048 --verbosity=progress --logdir=/Users/joaojunqueira/IdeaProjects/SecureCard/SecureCardDB/log --evaluator-log-level=5 --warnings=show --qlconfig-file=/Users/joaojunqueira/IdeaProjects/SecureCard/qlconfig.yml --no-rerun --output=/Users/joaojunqueira/IdeaProjects/SecureCard/SecureCardDB/results -- /Users/joaojunqueira/IdeaProjects/SecureCard/SecureCardDB/db-java codeql/java-queries
+[2023-04-13 21:47:40] Calling plumbing command: codeql resolve queries --qlconfig-file=/Users/joaojunqueira/IdeaProjects/SecureCard/qlconfig.yml --format=json -- codeql/java-queries
+[2023-04-13 21:50:35] Exception caught at top level: Query pack codeql/java-queries cannot be found. Check the spelling of the pack.
+                      com.semmle.cli2.resolve.ResolveQueriesCommand.resolveQuerySpecifier(ResolveQueriesCommand.java:277)
+                      com.semmle.cli2.resolve.ResolveQueriesCommand.executeJSON(ResolveQueriesCommand.java:193)
+                      com.semmle.cli2.resolve.ResolveQueriesCommand.executeJSON(ResolveQueriesCommand.java:71)
+                      com.semmle.cli2.picocli.SimpleJsonSubcommand.executeInsistingOnJSONWithExistingMessages(SimpleJsonSubcommand.java:129)
+                      com.semmle.cli2.picocli.SubcommandCommon.withCompilationMessages(SubcommandCommon.java:435)
+                      com.semmle.cli2.picocli.SimpleJsonSubcommand.executeInsistingOnJSON(SimpleJsonSubcommand.java:119)
+                      com.semmle.cli2.picocli.PlumbingRunner.call(PlumbingRunner.java:53)
+                      com.semmle.cli2.picocli.SubcommandCommon.callPlumbingInProcess(SubcommandCommon.java:170)
+                      com.semmle.cli2.execute.ExecuteQueriesCommand.executeSubcommand(ExecuteQueriesCommand.java:321)
+                      com.semmle.cli2.picocli.SubcommandCommon.lambda$executeSubcommandWithMessages$2(SubcommandCommon.java:671)
+                      com.semmle.cli2.picocli.SubcommandCommon.withCompilationMessages(SubcommandCommon.java:435)
+                      com.semmle.cli2.picocli.SubcommandCommon.executeSubcommandWithMessages(SubcommandCommon.java:670)
+                      com.semmle.cli2.picocli.SubcommandCommon.call(SubcommandCommon.java:591)
+                      com.semmle.cli2.picocli.SubcommandMaker.runMain(SubcommandMaker.java:225)
+                      com.semmle.cli2.picocli.SubcommandMaker.runMain(SubcommandMaker.java:234)
+                      com.semmle.cli2.CodeQL.main(CodeQL.java:102)

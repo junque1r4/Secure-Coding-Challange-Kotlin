@@ -1,0 +1,89 @@
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:55", "kind": "INFO", "message": "Extraction started" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:55", "kind": "INFO", "message": "Extraction for invocation TRAP file \/Users\/joaojunqueira\/IdeaProjects\/SecureCard\/SecureCardDB\/trap\/java\/invocations\/kotlin.469131248371973271.trap" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:55", "kind": "INFO", "message": "Kotlin version 1.7.22" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:55", "kind": "INFO", "message": "Peak memory: Usage before extractor" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:55", "kind": "INFO", "message": "Peak memory: * Peak for non-heap bean CodeHeap 'non-nmethods' is 1650688" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:55", "kind": "INFO", "message": "Peak memory: * Peak for non-heap bean Metaspace is 85303984" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:55", "kind": "INFO", "message": "Peak memory: * Peak for non-heap bean CodeHeap 'profiled nmethods' is 25990272" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:55", "kind": "INFO", "message": "Peak memory: * Peak for non-heap bean Compressed Class Space is 9330064" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:55", "kind": "INFO", "message": "Peak memory: * Peak for heap bean G1 Eden Space is 91226112" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:55", "kind": "INFO", "message": "Peak memory: * Peak for heap bean G1 Old Gen is 283041792" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:55", "kind": "INFO", "message": "Peak memory: * Peak for heap bean G1 Survivor Space is 10485760" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:55", "kind": "INFO", "message": "Peak memory: * Peak for non-heap bean CodeHeap 'non-profiled nmethods' is 10734976" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:55", "kind": "INFO", "message": "Peak memory: * Total heap peak: 384753664" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:55", "kind": "INFO", "message": "Peak memory: * Total non-heap peak: 133009984" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:55", "kind": "INFO", "message": "Extracting file \/Users\/joaojunqueira\/IdeaProjects\/SecureCard\/src\/test\/kotlin\/com\/example\/securecard\/SecureCardApplicationTests.kt" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:55", "kind": "INFO", "message": "Skipping extracting external decl Unit" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:55", "kind": "INFO", "message": "Skipping extracting external decl Object" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:55", "kind": "INFO", "message": "Skipping extracting external decl Any" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:55", "kind": "INFO", "message": "Skipping extracting external decl String" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:55", "kind": "INFO", "message": "Skipping extracting external decl String" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:55", "kind": "INFO", "message": "Skipping extracting external decl Cloneable" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:55", "kind": "INFO", "message": "Skipping extracting external decl Cloneable" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:55", "kind": "INFO", "message": "Skipping extracting external decl Serializable" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:55", "kind": "INFO", "message": "Skipping extracting external decl Integer" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:55", "kind": "INFO", "message": "Skipping extracting external decl Int" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:55", "kind": "INFO", "message": "Skipping extracting external decl Class" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:55", "kind": "INFO", "message": "Skipping extracting external decl GenericDeclaration" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:55", "kind": "INFO", "message": "Skipping extracting external decl Type" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:55", "kind": "INFO", "message": "Skipping extracting external decl AnnotatedElement" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:55", "kind": "INFO", "message": "Skipping extracting external decl OfField" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:55", "kind": "INFO", "message": "Skipping extracting external decl TypeDescriptor" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:55", "kind": "INFO", "message": "Skipping extracting external decl Constable" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:55", "kind": "INFO", "message": "Skipping extracting external decl Annotation" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:55", "kind": "INFO", "message": "Skipping extracting external decl Annotation" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:55", "kind": "INFO", "message": "Skipping extracting external decl Deprecated" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:55", "kind": "INFO", "message": "Skipping extracting external decl MustBeDocumented" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:55", "kind": "INFO", "message": "Skipping extracting external decl Retention" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:55", "kind": "INFO", "message": "Skipping extracting external decl AnnotationRetention" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:55", "kind": "INFO", "message": "Skipping extracting external decl Target" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:55", "kind": "INFO", "message": "Skipping extracting external decl AnnotationTarget" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Skipping extracting external decl NotNull" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Skipping extracting external decl Inherited" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Skipping extracting external decl Boolean" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Skipping extracting external decl Boolean" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Skipping extracting external decl Enum" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Skipping extracting external decl Comparable" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Skipping extracting external decl Comparable" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Skipping extracting external decl Optional" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Skipping extracting external decl EnumDesc" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Skipping extracting external decl DynamicConstantDesc" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Skipping extracting external decl ConstantDesc" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Skipping extracting external decl Enum" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Skipping extracting external decl Repeatable" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Skipping extracting external decl Nullable" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Skipping extracting external decl ApplicationContext" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Skipping extracting external decl List" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Skipping extracting external decl Collection" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Skipping extracting external decl Iterable" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Skipping extracting external decl MutableIterable" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Skipping extracting external decl MutableCollection" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Skipping extracting external decl MutableList" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Skipping extracting external decl Set" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Skipping extracting external decl MutableSet" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Skipping extracting external decl Method" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Skipping extracting external decl Throwable" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Skipping extracting external decl Throwable" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Skipping extracting external decl Function" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Skipping extracting external decl Map" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Skipping extracting external decl MutableMap" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Skipping extracting external decl Parameter" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Skipping extracting external decl Executable" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Skipping extracting external decl FunctionalInterface" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Skipping extracting external decl ApplicationEvent" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Skipping extracting external decl AttributeAccessor" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Skipping extracting external decl AnnotationAttributes" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Skipping extracting external decl Constructor" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Skipping extracting external decl ConfigurableApplicationContext" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Peak memory: Usage after extractor" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Peak memory: * Peak for non-heap bean CodeHeap 'non-nmethods' is 1650688" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Peak memory: * Peak for non-heap bean Metaspace is 86914992" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Peak memory: * Peak for non-heap bean CodeHeap 'profiled nmethods' is 26519168" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Peak memory: * Peak for non-heap bean Compressed Class Space is 9417448" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Peak memory: * Peak for heap bean G1 Eden Space is 91226112" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Peak memory: * Peak for heap bean G1 Old Gen is 294036480" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Peak memory: * Peak for heap bean G1 Survivor Space is 10485760" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Peak memory: * Peak for non-heap bean CodeHeap 'non-profiled nmethods' is 10734976" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Peak memory: * Total heap peak: 395748352" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Peak memory: * Total non-heap peak: 135237272" }
+{ "origin": "CodeQL Kotlin extractor", "timestamp": "2023-04-13 21:19:56", "kind": "INFO", "message": "Extraction completed" }
